@@ -15,6 +15,8 @@ We recommend **Python 3.6** or higher, **[PyTorch 1.6.0](https://pytorch.org/get
 If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
 [PyTorch - Get Started](https://pytorch.org/get-started/locally/) for further details how to install PyTorch.
 
+The pretrained models should be existed under model folder, the folder is empty and you need to download them from this [link](https://github.com/aalzeitoun/QA-over-HKG-API).
+
 ### Installing
 
 * Install [sentence-transformers](https://github.com/UKPLab/sentence-transformers)
@@ -40,16 +42,16 @@ example.py send a JSON body contains a ***Question*** and the ***Topic Entity***
 JSON sent to the API:
 ```
 {
-    "question_txt": "What is your name?",
-    "topic_entity_id": "Q3035"
+    "question_txt": "Which is the sports award that Lionel Messi was awarded?",
+    "topic_entity_id": "Q615"
 }
 ```
 
 JSON received from API app:
 ```
 {
-    "question_txt": "What is your name?",
-    "topic_entity_id": "Q3035",
+    "question_txt": "Which is the sports award that Lionel Messi was awarded?",
+    "topic_entity_id": "Q615",
     "top_corechain": "THE TOP RANKED CORECHAIN",
     "sparqlQuery": "SPARQL QUERY OF THE ANSWER",
     "answer": "ANSWER OF THE QUESTION"
