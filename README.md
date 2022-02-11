@@ -78,6 +78,6 @@ To be added
 
 ## Acknowledgments
 
-Inspiration, code snippets, etc.
+Inspiration:
 * [Learning to Rank Query Graphs for Complex Question Answering over Knowledge Graphs](https://arxiv.org/abs/1811.01118)
 * [Semantic Parsing via Staged Query Graph Generation: Question Answering with Knowledge Base](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ACL15-STAGG.pdf)
