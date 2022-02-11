@@ -149,7 +149,7 @@ def question_answering(nlQuestion, topicEntity):
 
     candidate_corechains = corechains_generation(nlQuestion, topicEntity)
     correct_corechain = lcquad_single_q(topicEntity, nlQuestion, candidate_corechains)
-    predicted_questionType = 0 #pred_questionType(nlQuestion)
+    predicted_questionType = pred_questionType(nlQuestion)
 
     topicEntity1 = topicEntity
     if ',' in topicEntity:
