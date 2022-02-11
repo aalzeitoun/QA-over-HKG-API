@@ -190,30 +190,6 @@ def question_answering(nlQuestion, topicEntity):
 
 
 
-# sparqlQuery = "{} ?sbj where { ?sbj wdt:P802 wd:Q44015 . ?sbj wdt:P31 wd:Q178885 } "
-# print(sparqlQuery.format(queryHead, itemno, price))
-# ########################################################
-
-
-
-# Which is the sports award that Lionel Messi was awarded?  (Q615)
-question_answering("Which is the sports award that Lionel Messi was awarded?", "Q615")
-
-
-
-
-
-
-
-
-# print("corrected CC: ", correct_corechain)
-# print("Question Type: ", predicted_questionType)
-
-
-#Q44015, Q178885	-P802 +P31	Who is the god for John the Apostle?
-#select distinct ?sbj where { ?sbj wdt:P802 wd:Q44015 . ?sbj wdt:P31 wd:Q178885 }
-
-
 
 ###############################################
 ######### Query & Core chain types:############
