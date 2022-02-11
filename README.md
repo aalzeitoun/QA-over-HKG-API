@@ -1,6 +1,6 @@
 # Question Answering over Hyper-relational Knowledge Graph API
 
-Question Answering system API that receive pair of (question, Topic Entity) as input and generate the output as the answer of the given question as (SPARQL Query, Result of excuting the query).
+Question Answering system API, receives pair of (question, Topic Entity) as input and generates the output as the answer of the given question as (SPARQL Query, Result of excuting the query).
 
 ## Description
 
