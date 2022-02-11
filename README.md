@@ -31,10 +31,10 @@ The pretrained models should be existed under model folder, the folder is empty 
 * Run the API App (as a server)
 * Run the Example (as a client)
 ```
-uvicorn main:app --reload
+$ uvicorn main:app --reload
 ```
 ```
-python3 example.py
+$ python3 example.py
 ```
 
 ## Example
