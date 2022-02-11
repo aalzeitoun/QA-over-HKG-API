@@ -243,25 +243,3 @@ question_answering("Which is the sports award that Lionel Messi was awarded?", "
 # #Which is academic degree and academic major of Gloria Estefan who educated at as University of Miami
 ###############################################
 ###############################################
-
-
-# print("+*", generate_query_statements("Q187247","+P27, *P580"))
-# print("-*", generate_query_statements("Q40030","-P2632, *P585"))
-# print("+*", generate_query_statements("Q184697","+P69, *P512"))
-# print("-*", generate_query_statements("Q738258","-P69, *P512"))
-#print("-++", generate_query_statements("Q4830453","-P31 +P2226, +P512"))
-# print("+**", generate_query_statements("Q184697","+P69 *P512, *P812"))
-# print("-**", generate_query_statements("Q738258","-P69 *P512, *P812"))
-
-
-# SELECT DISTINCT ?answer1_label ?answer2_label WHERE { wd:Q131324 wdt:P22 ?answer1. wd:Q131324 wdt:P25 ?answer2.
-#                                                     ?answer1 rdfs:label ?answer1_label. ?answer2 rdfs:label ?answer2_label.
-#                                                    FILTER (lang(?answer1_label) = 'en')
-#                                                    FILTER (lang(?answer2_label) = 'en')}
-
-
-
-#! Question examples:
-# what university Albert Einstein did his bachelor of science degree?  ->> Q937
-# What's the original language for Titanic? ->>
-# Which is the sports award that Lionel Messi was awarded?  (Q615)
