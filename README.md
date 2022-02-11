@@ -4,7 +4,7 @@ Question Answering system API that receive pair of (question, Topic Entity) as i
 
 ## Description
 
-In this work, we explore the core chain approaches for the task of Knowledge Graph Question Answering (KGQA). We adopt hyper-relational KG (e.g., Wiki- data) as new domain for previous work, focusing on pre-trained Language model, Sentence-BERT is state-of-the-art sentence and text embedding, we proposed method for core chain ranking on two QA data-set LC-QuAD 2.0 over wikidata knowledge graph. Our system generates the core chains from a natural language question (NLQ) then ranks these core chains in-order to build actual Sparql query. In addition, we explore the intention of the question, we consider this task as a predicting task and we pre-trained BERT model to accomplish it.
+In this work, we explore the core chain approaches for the task of Knowledge Graph Question Answering (KGQA). We adopt hyper-relational KG (e.g., Wikidata) as new domain for previous work, focusing on pre-trained Language model, Sentence-BERT is state-of-the-art sentence and text embedding, we proposed method for core chain ranking on two QA dataset [LC-QuAD 2.0](https://figshare.com/projects/LCQuAD_2_0/62270) over wikidata knowledge graph. Our system generates the core chains from a natural language question (NLQ) then ranks these core chains in-order to build actual Sparql query. In addition, we explore the intention of the question, we consider this task as a predicting task and we pre-trained BERT model to accomplish it.
 
 ## Getting Started
 
@@ -24,7 +24,7 @@ If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA
 
 ### Executing program
 
-* Run the API APP (as a server)
+* Run the API App (as a server)
 * Run the Example (as a client)
 ```
 uvicorn main:app --reload
@@ -37,15 +37,15 @@ python3 example.py
 
 example.py send a JSON body contains a ***Question*** and the ***Topic Entity*** (Wikidata identifier) of the question as a *request* to the API, then will receive a JSON file holds the *Answer*, *SPARQL Query* and the *Top Ranked Core chain*.
 
-JSON sent (input):
+JSON sent to the API:
 ```
 {
     "question_txt": "What is your name?",
     "topic_entity_id": "Q3035"
-        }
+}
 ```
 
-JSON received (output):
+JSON received from API app:
 ```
 {
     "question_txt": "What is your name?",
@@ -53,7 +53,7 @@ JSON received (output):
     "top_corechain": "THE TOP RANKED CORECHAIN",
     "sparqlQuery": "SPARQL QUERY OF THE ANSWER",
     "answer": "ANSWER OF THE QUESTION"
-        }
+}
 ```
 
 ## Authors
@@ -65,15 +65,12 @@ ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
 * 0.1
     * Initial Release
 
 ## License
 
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+To be added
 
 ## Acknowledgments
 
