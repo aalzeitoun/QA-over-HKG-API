@@ -1,3 +1,7 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 02/2022
+    Status: Production
+"""
 
 from api_build_query import question_answering
 from typing import Optional

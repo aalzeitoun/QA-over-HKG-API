@@ -1,3 +1,8 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 07/2021
+    Status: Production
+"""
+
 from sentence_transformers import SentenceTransformer, util
 from sentence_transformers.cross_encoder import CrossEncoder
 import numpy as np
@@ -97,12 +102,12 @@ def sbert_answers(question_val, corechains, specialUse=None): #correctAns remove
     top1_cc = [top1_ccId,top1_cclbl]
     return top1_cc
 
-    
+
 #============================================================================
 #========  put lbl, ids of corechains for specific TE in one list
 #============================================================================
 def lcquad_corechain(question_val, candidate_corechains, specialUse=None):
-    corechains_labels = []  
+    corechains_labels = []
     corechains_ids = []
     isFound = False
     if not specialUse:
@@ -116,7 +121,7 @@ def lcquad_corechain(question_val, candidate_corechains, specialUse=None):
             cc_id = arguments[3].replace("\n","")
             corechains_labels.append(cc_lbl)
             corechains_ids.append(cc_id)
-        
+
         corechains = list(zip(corechains_ids,corechains_labels))
     else:
         corechains = candidate_corechains
@@ -141,7 +146,7 @@ def lcquad_corechain(question_val, candidate_corechains, specialUse=None):
 def lcquad_single_q(topicEntity, nlQuestion, candidate_corechains=None): ###### dataSource : wikidata or cache
     #F_test_corechains = open("data/lcquad_test/lcquad_test_corechain.txt", "r")
     F_test_corechains = open("data/lcquad_cache/lcquad_cache_corechain.txt", "r")
-    
+
     all_test_corechains = F_test_corechains.readlines()
 
     start_time_loop = time.time()
@@ -154,14 +159,14 @@ def lcquad_single_q(topicEntity, nlQuestion, candidate_corechains=None): ###### 
     print("Question: ", nlQuestion)
     print("Topic Entity: ", topicEntity)
 
-    
+
     #### retrieve core chains from Cashe
     if len(candidate_corechains) == 0:
         tabbed_entIDs = topicEntity + '\t'
         # collect all corechains for the relevant TE from cache
-        candidate_corechains = [x for x in all_test_corechains if tabbed_entIDs in x] 
-        
-        if candidate_corechains: 
+        candidate_corechains = [x for x in all_test_corechains if tabbed_entIDs in x]
+
+        if candidate_corechains:
             top1_cc = lcquad_corechain(nlQuestion, candidate_corechains)
             #print('top corechain:', top1_cc)
 
@@ -172,5 +177,5 @@ def lcquad_single_q(topicEntity, nlQuestion, candidate_corechains=None): ###### 
     else:
         # candidate_corechains = all_ccc_generation(nlQuestion, topicEntity)
         top1_cc = lcquad_corechain(nlQuestion, candidate_corechains, 'specialUse')
- 
+
     return top1_cc

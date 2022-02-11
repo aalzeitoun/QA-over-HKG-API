@@ -1,10 +1,15 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 02/2022
+    Status: Production
+"""
+
 from api_get_correct_corechain import lcquad_single_q
-#from api_predict_queryType import pred_questionType
+from api_predict_queryType import pred_questionType
 from api_corechains_generation import corechains_generation
 
 ########recieve the ids of (given) correct corechain and return list[ids, lbl] of it.
 ### ex recieve  +P31  return: [+P31, '+instance of']
-def generate_query_statements(topicEntity, correct_CC, queryHead): 
+def generate_query_statements(topicEntity, correct_CC, queryHead):
     div_parts_noSign = correct_CC.replace(',','')
     div_parts = div_parts_noSign.split(' ')
     new_correct_CC_arr = []
@@ -28,7 +33,7 @@ def generate_query_statements(topicEntity, correct_CC, queryHead):
             queryStatements = "?answer wdt:{} wd:{} ."
             queryStatements = queryStatements.format(cc_without_sign, topicEntity)
             queryStatements = ["?answer ?answerLabel ", queryStatements]
-    
+
     ## Two predicats CC ex: [+P1 +P2] or [+P1, +P2] or [+P1 *P2]
     if len(div_parts) == 2:
         sign1= div_parts[0][0]
@@ -83,8 +88,8 @@ def generate_query_statements(topicEntity, correct_CC, queryHead):
                 queryStatements = "?answer2 p:{} ?statement . ?statement ps:{} wd:{}. ?statement pq:{} ?answer1 ."
                 queryStatements = queryStatements.format(cc1_without_sign, cc1_without_sign, topicEntity, cc2_without_sign)
                 queryStatements = ["?answer1 ?answer1Label ", queryStatements]
-       
-    
+
+
     # # ex: [+P1 +P2, +P3]    or   [+P1 *P2, *P3]
     if len(div_parts) == 3:
         sign1= div_parts[0][0]
@@ -108,7 +113,7 @@ def generate_query_statements(topicEntity, correct_CC, queryHead):
             if sign2 == '-' and sign3 == '-':
                 qStat_part2 = "?answer2 wdt:{} ?answer1. ?answer3 wdt:{} ?answer1 ."
                 qStat_part2 = qStat_part2.format(cc2_without_sign, cc3_without_sign)
-        
+
             #build the first statement and combine it with the last two statemnets:
             if sign1 == '+':
                 queryStatements = "wd:{} wdt:{} ?answer1. "
@@ -205,8 +210,8 @@ question_answering("Which is the sports award that Lionel Messi was awarded?", "
 # print("Question Type: ", predicted_questionType)
 
 
-#Q44015, Q178885	-P802 +P31	Who is the god for John the Apostle?	 
-#select distinct ?sbj where { ?sbj wdt:P802 wd:Q44015 . ?sbj wdt:P31 wd:Q178885 } 
+#Q44015, Q178885	-P802 +P31	Who is the god for John the Apostle?
+#select distinct ?sbj where { ?sbj wdt:P802 wd:Q44015 . ?sbj wdt:P31 wd:Q178885 }
 
 
 
@@ -249,7 +254,7 @@ question_answering("Which is the sports award that Lionel Messi was awarded?", "
 # print("-**", generate_query_statements("Q738258","-P69 *P512, *P812"))
 
 
-# SELECT DISTINCT ?answer1_label ?answer2_label WHERE { wd:Q131324 wdt:P22 ?answer1. wd:Q131324 wdt:P25 ?answer2. 
+# SELECT DISTINCT ?answer1_label ?answer2_label WHERE { wd:Q131324 wdt:P22 ?answer1. wd:Q131324 wdt:P25 ?answer2.
 #                                                     ?answer1 rdfs:label ?answer1_label. ?answer2 rdfs:label ?answer2_label.
 #                                                    FILTER (lang(?answer1_label) = 'en')
 #                                                    FILTER (lang(?answer2_label) = 'en')}
@@ -258,5 +263,5 @@ question_answering("Which is the sports award that Lionel Messi was awarded?", "
 
 #! Question examples:
 # what university Albert Einstein did his bachelor of science degree?  ->> Q937
-# What's the original language for Titanic? ->> 
+# What's the original language for Titanic? ->>
 # Which is the sports award that Lionel Messi was awarded?  (Q615)

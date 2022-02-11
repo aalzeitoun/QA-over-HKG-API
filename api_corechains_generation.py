@@ -1,3 +1,8 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 07/2021
+    Status: Production
+"""
+
 import time
 import json
 import re
@@ -22,16 +27,16 @@ def corechains_oneHop_cache(entityIds_arr, prop_dir, specialUse=None):
     prop_sign = "+"
     if(prop_dir == "left"):
         prop_sign = "-"
-    corechains_labels = []  
+    corechains_labels = []
     corechains_ids = []
     lcquad_props = dict_lcquad_predicates(prop_dir)
     query = dict_sparqlQueries["query_" + prop_dir + "_oneHope"] % {
             'target_resource': entityIds_arr[0], 'filter_in': ''}
-    
+
     if len(entityIds_arr) == 2:
         query = dict_sparqlQueries["query_" + prop_dir + "_twoTE"] % {
             'target_resource': entityIds_arr[0], 'target_resource2': entityIds_arr[1], 'filter_in': ''}
-    
+
     error_msg = ', '.join(entityIds_arr) + "\t" + prop_sign
     write_queryMsg = [F_cache_error, error_msg]
 
@@ -63,12 +68,12 @@ def corechains_oneHop_cache(entityIds_arr, prop_dir, specialUse=None):
         print(prop_sign, len(corechains_labels))
     corechains = list(zip(corechains_ids,corechains_labels))
     return corechains
-#! -------- One Hope corechain Cashe fixing using filters 
+#! -------- One Hope corechain Cashe fixing using filters
 def corechains_oneHop_cache_fix(entityIds_arr, prop_dir, specialUse=None):
     prop_sign = "+"
     if(prop_dir == "left"):
         prop_sign = "-"
-    
+
     corechains_labels = []
     corechains_ids = []
     lcquad_props = dict_lcquad_predicates(prop_dir)
@@ -77,11 +82,11 @@ def corechains_oneHop_cache_fix(entityIds_arr, prop_dir, specialUse=None):
         j += 1
         query = dict_sparqlQueries["query_" + prop_dir + "_oneHope"] % {
                 'target_resource': entityIds_arr[0], 'filter_in': filter}
-        
+
         if len(entityIds_arr) == 2:
             query = dict_sparqlQueries["query_" + prop_dir + "_twoTE"] % {
                 'target_resource': entityIds_arr[0], 'target_resource2': entityIds_arr[1], 'filter_in': filter}
-        
+
         error_msg = ', '.join(entityIds_arr) + "\t" + prop_sign + "\t" + "filter:" + str(j)
         write_queryMsg = [F_cache_error, error_msg]
         i = 0
@@ -96,7 +101,7 @@ def corechains_oneHop_cache_fix(entityIds_arr, prop_dir, specialUse=None):
                 cc_id = prop_sign + prop_oneHop
                 if len(entityIds_arr) == 1:
                     cc_line = entityIds_arr[0].replace('wd:', '') + "\t" + prop_sign + "\t" + cc_label + "\t" + cc_id
-                
+
                 if len(entityIds_arr) == 2:
                     cc_line = ', '.join(entityIds_arr).replace(
                         'wd:', '') + "\t" + prop_sign + "\t" + cc_label + "\t" + cc_id
@@ -106,7 +111,7 @@ def corechains_oneHop_cache_fix(entityIds_arr, prop_dir, specialUse=None):
                 corechains_ids.append(cc_id)
                 if not specialUse:
                     write_to_file(F_corechains_cache, cc_line)
-   
+
     if len(entityIds_arr) == 1:
         if(prop_dir == "left"):
             #*get corechains of excluded predicates
@@ -136,7 +141,7 @@ def quilifiers_corechains_cache(entityIds_arr, prop_dir, specialUse=None):
     hyper_sign = "*"
     ccSign = prop_sign + hyper_sign
     lcquad_props = dict_lcquad_predicates(prop_dir)
-    
+
     if len(entityIds_arr) == 1: # TE P OBJ PQ Qual -> [+-P *PQ]
         query = dict_sparqlQueries["query_only_hyperRel_" + prop_dir] % {
             'target_resource': entityIds_arr[0], 'target_prop': "?p", "target_resource2": '?obj', "target_qualifier": '?qualifier', 'filter_in': ''}
@@ -144,17 +149,17 @@ def quilifiers_corechains_cache(entityIds_arr, prop_dir, specialUse=None):
     if len(entityIds_arr) == 2 and specialUse == 'NoQualifier':  # TE1 P TE2 PQ Qual -> [+-P *PQ]
         query = dict_sparqlQueries["query_only_hyperRel_" + prop_dir] % {
             'target_resource': entityIds_arr[0], 'target_prop': "?p", "target_resource2": entityIds_arr[1], "target_qualifier": '?qualifier', 'filter_in': ''}
-    
+
     if len(entityIds_arr) == 2 and specialUse == 'TE2Qualifier':  # TE1 P OBJ PQ TE2 -> [+-P, *PQ]  {comma means the answer between}
         query = dict_sparqlQueries["query_only_hyperRel_" + prop_dir] % {
             'target_resource': entityIds_arr[0], 'target_prop': "?p", "target_resource2": '?obj', "target_qualifier": entityIds_arr[1], 'filter_in': ''}
         ccSign = prop_sign + ',' + hyper_sign
-    
+
     if len(entityIds_arr) == 2 and specialUse == 'TE1Qualifier':  # TE2 P OBJ PQ TE1 ->  [*PQ +-P]  [not in the LCQuAd2 Tem]
         query = dict_sparqlQueries["query_only_hyperRel_" + prop_dir] % {
             'target_resource': entityIds_arr[1], 'target_prop': "?p", "target_resource2": '?obj', "target_qualifier": entityIds_arr[0], 'filter_in': ''}
         ccSign = hyper_sign + prop_sign
-        
+
     # val1 P val2 PQ1 TE1, PQ2 TE2 ->  [*PQ1 *PQ2 +-P]  [not in the LCQuAd2 Tem]
     if len(entityIds_arr) == 2 and specialUse == 'TwoQualifier':
         query = dict_sparqlQueries["query_twoTE_as_qualifiers"] % {
@@ -174,16 +179,16 @@ def quilifiers_corechains_cache(entityIds_arr, prop_dir, specialUse=None):
                 #------ create dataset of right/left corechains
                 cc_hyper_label = ""
                 cc_hyper_id = ""
-                
+
                 cc_line = ''
 
                 cc_label = prop_sign + result['propertyLabel']['value']
                 cc_id = prop_sign + prop_oneHop
                 cc_hyper_id = hyper_sign + result['hyperq']['value'].replace('http://www.wikidata.org/entity/', '')
                 cc_hyper_label = hyper_sign + result['hyperqLabel']['value']
-                
+
                 # TE1 P TE2 PQ Qual -> [+-P *PQ]
-                if len(entityIds_arr) == 2 and specialUse == 'NoQualifier':  
+                if len(entityIds_arr) == 2 and specialUse == 'NoQualifier':
                     cc_line = ', '.join(entityIds_arr).replace(
                         'wd:', '') + "\t" + ccSign + "\t" + cc_label + ' ' + cc_hyper_label + "\t" + cc_id + ' ' + cc_hyper_id
                     #------ create corechains
@@ -215,9 +220,9 @@ def quilifiers_corechains_cache(entityIds_arr, prop_dir, specialUse=None):
                     #------ create corechains
                     corechains_labels.append(cc_hyper_label + ' ' + cc_hyper_label2 + ' ' + cc_label)
                     corechains_ids.append(cc_hyper_id + ' ' + cc_hyper_id2 + ' ' + cc_id)
-              
+
                 # TE P OBJ PQ Qual -> [+-P *PQ]:
-                elif len(entityIds_arr) == 1:  
+                elif len(entityIds_arr) == 1:
                     cc_line = entityIds_arr[0].replace(
                         'wd:', '') + "\t" + ccSign + "\t" + cc_label + ' ' + cc_hyper_label + "\t" + cc_id + ' ' + cc_hyper_id
                     #------ create corechains
@@ -279,7 +284,7 @@ def quilifiers_corechains_cache_fix(entityIds_arr, prop_dir, specialUse=None):
                 'target_resource': entityIds_arr[0], "target_resource2": entityIds_arr[1], 'filter_in': filter}
             error_msg = ', '.join(entityIds_arr) + "\t" + \
                 hyper_sign + hyper_sign + prop_sign + "\t" + "filter:" + str(j)
-        
+
         write_queryMsg = [F_cache_error, error_msg]
         i = 0
         results = get_query_results(query, write_queryMsg)
@@ -296,7 +301,7 @@ def quilifiers_corechains_cache_fix(entityIds_arr, prop_dir, specialUse=None):
                 cc_id = prop_sign + prop_oneHop
                 cc_hyper_id = hyper_sign + result['hyperq']['value'].replace('http://www.wikidata.org/entity/', '')
                 cc_hyper_label = hyper_sign + result['hyperqLabel']['value']
-                
+
                 # TE1 P OBJ PQ TE2 -> [+-P, *PQ]  {comma means the answer between}
                 if len(entityIds_arr) == 2 and specialUse == 'TE2Qualifier':
                     cc_line = ', '.join(entityIds_arr).replace(
@@ -352,13 +357,13 @@ def corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop, prop_dir):
         prop_sign1 = "+"
     else:
         prop_sign1 = "-"
-    
+
     if(prop_dir[1] == "R"):
         prop_sign2 = "+"
     else:
         prop_sign2 = "-"
         twoHop_dir = 'left'
-    
+
     ccSign = prop_sign1 + prop_sign2
 
     corechains_labels = []
@@ -367,9 +372,9 @@ def corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop, prop_dir):
 
     #selectQ = "?p1 ?p2 "
     #directClaim = "FILTER(STRSTARTS(str(?p1), 'http://www.wikidata.org/prop/direct/')) .  FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) . "
-    selectQ = "?p2 " 
+    selectQ = "?p2 "
     directClaim = "FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) . "
-    
+
     highest_id = highest_rank_oneHop[0]
     p1 = 'wdt:' + highest_id.replace(highest_rank_oneHop[0][0], '')
 
@@ -381,9 +386,9 @@ def corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop, prop_dir):
 
     if(len(entityIds_arr) == 2):
         query = dict_sparqlQueries["query_" + prop_dir + "_twoHops"] % {
-            'target_resource': entityIds_arr[0], 'selectQ': selectQ, 'p1': p1, 'target_resource2': entityIds_arr[1], 'directClaim': directClaim} 
+            'target_resource': entityIds_arr[0], 'selectQ': selectQ, 'p1': p1, 'target_resource2': entityIds_arr[1], 'directClaim': directClaim}
     error_msg = ', '.join(entityIds_arr) + "\t" + ccSign
-    write_queryMsg = [F_cache_error, error_msg]    
+    write_queryMsg = [F_cache_error, error_msg]
     i = 0
     results = get_query_results(query, write_queryMsg)
 
@@ -399,13 +404,13 @@ def corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop, prop_dir):
                 i += 1
                 prop1_lbl = mu_prop_lcquad(prop1_id, 'id') #get label of oneHopID
                 prop2_lbl = mu_prop_lcquad(prop2_id, 'id')
-                
+
                 cc_oneHopID = prop_sign1 + prop1_id
                 cc_oneHopLabel = prop_sign1 + prop1_lbl
 
                 cc_twoHopID = prop_sign2 + prop2_id
                 cc_twoHopLabel = prop_sign2 + prop2_lbl
-                
+
                 cc_label = cc_oneHopLabel + " " + cc_twoHopLabel
                 cc_id = cc_oneHopID + " " + cc_twoHopID
 
@@ -419,13 +424,13 @@ def corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop, prop_dir):
     corechains = list(zip(corechains_ids, corechains_labels))
     # -------- if timeout
     if len(results) == 1:
-        write_to_file(F_cache_terminal, "fixing error by changin the query " + ccSign)       
-        print("fixig error by changing the query" + ccSign)       
+        write_to_file(F_cache_terminal, "fixing error by changin the query " + ccSign)
+        print("fixig error by changing the query" + ccSign)
         corechains = corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir)
-    
-    write_to_file(F_cache_terminal, ccSign + ' ' + str(len(corechains))) 
-    print(ccSign, len(corechains)) 
-     
+
+    write_to_file(F_cache_terminal, ccSign + ' ' + str(len(corechains)))
+    print(ccSign, len(corechains))
+
     if(len(corechains) == 0 and len(results) != 1):
         write_to_file(F_cache_has_no_ans, ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + "LCQuAD2 issue")
     elif(len(corechains) == 0):
@@ -446,13 +451,13 @@ def corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir, s
     else:
         prop_sign1 = "-"
         oneHop_dir = 'left'
-    
+
     if(prop_dir[1] == "R"):
         prop_sign2 = "+"
     else:
         prop_sign2 = "-"
         twoHop_dir = 'left'
-    
+
     ccSign = prop_sign1 + prop_sign2
 
     corechains_labels = []
@@ -468,7 +473,7 @@ def corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir, s
     # directClaim = "FILTER(STRSTARTS(str(?p1), 'http://www.wikidata.org/prop/direct/')) .  FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) . "
     selectQ = '?obj1 ?p2 '
     directClaim = "FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) . "
-    
+
     highest_id = highest_rank_oneHop[0]
     p1 = 'wdt:' + highest_id.replace(highest_rank_oneHop[0][0], '')
 
@@ -477,10 +482,10 @@ def corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir, s
             'target_resource': entityIds_arr[0], 'selectQ': selectQ, 'p1': p1, 'target_resource2': '?obj2', 'directClaim': directClaim}
     if(len(entityIds_arr) == 2):
         query = dict_sparqlQueries["query_" + prop_dir + "_twoHops"] % {
-            'target_resource': entityIds_arr[0], 'selectQ': selectQ, 'p1': p1, 'target_resource2': entityIds_arr[1], 'directClaim': directClaim} 
+            'target_resource': entityIds_arr[0], 'selectQ': selectQ, 'p1': p1, 'target_resource2': entityIds_arr[1], 'directClaim': directClaim}
     error_msg = ', '.join(entityIds_arr) + "\t" + ccSign
     write_queryMsg = [F_cache_error, error_msg]
-    
+
     i = 0
     results = get_query_results(query, write_queryMsg)
     if len(results) > 1:
@@ -495,13 +500,13 @@ def corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir, s
                 i += 1
                 prop1_lbl = mu_prop_lcquad(prop1_id, 'id') #get label of oneHopID
                 prop2_lbl = mu_prop_lcquad(prop2_id, 'id')
-                
+
                 cc_oneHopID = prop_sign1 + prop1_id
                 cc_oneHopLabel = prop_sign1 + prop1_lbl
 
                 cc_twoHopID = prop_sign2 + prop2_id
                 cc_twoHopLabel = prop_sign2 + prop2_lbl
-                
+
                 cc_label = cc_oneHopLabel + " " + cc_twoHopLabel
                 cc_id = cc_oneHopID + " " + cc_twoHopID
 
@@ -528,19 +533,19 @@ def corechains_twoHops_cache_fix(entityIds_arr, highest_rank_oneHop, prop_dir, s
     if len(results) == 1:
         specialUse_txt = 'withoutProd'
         terminal_txt = 'fixing the error by using prod func'
-        
+
         # if specialUse == 'temp13-14':
         #     specialUse_txt = None
         #     terminal_txt = 'fixing the error of prod by using prod func 2'
         #     ccSign = prop_sign1 + '-/+,' + prop_sign2
-        
-        write_to_file(F_cache_terminal, terminal_txt + ccSign)    
+
+        write_to_file(F_cache_terminal, terminal_txt + ccSign)
         print(terminal_txt + ccSign)
         corechains = generate_prod_twoTE_corechain(entityIds_arr, prop_dir, specialUse_txt)
-    
+
     return corechains
 
-#! -------- Two Topic Entities Two Hops corechain Cashe 
+#! -------- Two Topic Entities Two Hops corechain Cashe
 def get_ent_between_twoTE(entityIds_arr, prop_dir):
     prop_sign1 = ""
     prop_sign2 = ""
@@ -561,13 +566,13 @@ def get_ent_between_twoTE(entityIds_arr, prop_dir):
     all_entities_between = []
     error_msg = ', '.join(entityIds_arr) + "\t" + ccSign
     write_queryMsg = [F_cache_error, error_msg]
-    if(len(entityIds_arr) == 1):  
+    if(len(entityIds_arr) == 1):
         query = dict_sparqlQueries["query_" + prop_dir + "_twoTE"] % {
             'target_resource': entityIds_arr[0], 'target_prop': '?p1', 'target_resource2': '?obj2'}
     else: # for {P1 P2} corechains
         query = dict_sparqlQueries["query_" + prop_dir + "_twoTE"] % {
             'target_resource': entityIds_arr[0], 'target_prop': '?p1', 'target_resource2': entityIds_arr[1]}
-    
+
     i = 0
     results = get_query_results(query, write_queryMsg)
     if len(results) > 1:
@@ -581,7 +586,7 @@ def get_ent_between_twoTE(entityIds_arr, prop_dir):
 
 def corechain_product_list_itself(entityIds_arr, oneHop_arr):
     ccSign = ''
-    prod_lists_labels = [] 
+    prod_lists_labels = []
     prod_lists_ids = []
 
     #product of list1 with itslef {ids} and {labels}
@@ -596,7 +601,7 @@ def corechain_product_list_itself(entityIds_arr, oneHop_arr):
         for j in range(i+1, len(oneHop_arr)):
             prod_lists_ids.append(cc[0] + ", " + oneHop_arr[j][0])
             prod_lists_labels.append(cc[1] + ", " + oneHop_arr[j][1])
-            
+
         i += 1
 
     i = 0
@@ -607,7 +612,7 @@ def corechain_product_list_itself(entityIds_arr, oneHop_arr):
             'wd:', '') + "\t" + ccSign + "\t" + cc_lbl + "\t" + prod_lists_ids [i]
         write_to_file(F_corechains_cache, line)
         i += 1
-    
+
     corechains = list(zip(prod_lists_ids, prod_lists_labels))
     write_to_file(F_cache_terminal, ccSign + ' ' + str(len(corechains)))
     print(ccSign, len(corechains))
@@ -629,7 +634,7 @@ def get_lcquad_entities(templateIDs):
             all_TE_of_temp.append(entities)
     return all_TE_of_temp
 
-#! generate corecahins for two hops (by creating filter first) 
+#! generate corecahins for two hops (by creating filter first)
 # #----TE1 P1 OBJ1 P2 OBJ2, OBJ1 P3 TE2 ---> P1 P2, P3
 def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
     prop_sign1 = ""
@@ -642,7 +647,7 @@ def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
         prop_sign1 = "+"
     else:
         prop_sign1 = "-"
-    
+
     if(prop_dir[1] == "R"):
         prop_sign2 = "+"
     else:
@@ -666,10 +671,10 @@ def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
             'target_resource': entityIds_arr[0], 'prod_statement': prod_statement, 'target_resource2': '?obj2', 'emb_filter': ''}
     if(len(entityIds_arr) == 2):
         query = dict_sparqlQueries["query_" + prop_dir + "_prod_twoHops"] % {
-            'target_resource': entityIds_arr[0], 'prod_statement': prod_statement, 'target_resource2': entityIds_arr[1], 'emb_filter': ''} 
+            'target_resource': entityIds_arr[0], 'prod_statement': prod_statement, 'target_resource2': entityIds_arr[1], 'emb_filter': ''}
     error_msg = ', '.join(entityIds_arr) + "\t" + ccSign
     write_queryMsg = [F_cache_error, error_msg]
-    
+
     i = 0
     results = get_query_results(query, write_queryMsg)
     if len(results) > 1:
@@ -688,7 +693,7 @@ def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
                 prop1_lbl = mu_prop_lcquad(prop1_id, 'id') #get label of oneHopID
                 prop2_lbl = mu_prop_lcquad(prop2_id, 'id')
                 prop3_lbl = mu_prop_lcquad(prop3_id, 'id')
-                
+
                 cc_oneHopID = prop_sign1 + prop1_id
                 cc_oneHopLabel = prop_sign1 + prop1_lbl
 
@@ -697,7 +702,7 @@ def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
 
                 cc_prodHopID = prop_sign3 + prop3_id
                 cc_prodHopLabel = prop_sign3 + prop3_lbl
-                
+
                 cc_label = cc_oneHopLabel + " " + cc_twoHopLabel+ ', ' + cc_prodHopLabel
                 cc_id = cc_oneHopID + " " + cc_twoHopID + ', ' + cc_prodHopID
 
@@ -714,14 +719,14 @@ def generate_twoHops_corechains_product(entityIds_arr, prop_dir, prod_dir):
             write_to_file(F_corechains_cache, cc_line)
     if len(results) == 1:
         terminal_txt = 'fixing the error by using prod func'
-        write_to_file(F_cache_terminal, terminal_txt + ccSign)    
+        write_to_file(F_cache_terminal, terminal_txt + ccSign)
         print(terminal_txt + ccSign)
         corechains = generate_prod_twoTE_corechain(entityIds_arr, prop_dir)
 
     if(len(corechains) == 0):
         write_to_file(F_cache_has_no_ans, ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + "LCQuAD2 issue")
     print(ccSign, len(corechains))
-    return corechains 
+    return corechains
 
 #! generate product corechains for two TE with two hops: # #----TE1 P1 OBJ1 P2 OBJ2, OBJ1 P3 TE2
 #* THIS FUNCTION IS USED AS A SECONDARY PROD FUNC WHERE THE DIFF IS FIRST RETRIEVING ALL THE ENT BETWEEN
@@ -759,21 +764,21 @@ def generate_prod_twoTE_corechain(entityIds_arr, prop_dir, specialUse=None):
         r_oneHop_cc = corechains_oneHop_cache([entityIds_arr[0], ent], dirOneHop, 'specialUse') #specialUse means to not write to the txt file
         if len(entityIds_arr) == 2:
             r_twoHops_cc = corechains_oneHop_cache([ent, entityIds_arr[1]], dirTwoHop, 'specialUse')#specialUse means to not write to the txt file
-        
+
         #generate oneHop for ent
         r_ent = []
         if not specialUse:
-            r_ent = corechains_oneHop_cache([ent], 'right', 'specialUse')#specialUse means to not write to the txt file      
-        
+            r_ent = corechains_oneHop_cache([ent], 'right', 'specialUse')#specialUse means to not write to the txt file
+
         if specialUse == 'withoutProd' and len(entityIds_arr) == 1:
-            r_ent = corechains_oneHop_cache([ent], dirTwoHop, 'specialUse')#specialUse means to not write to the txt file      
-        
+            r_ent = corechains_oneHop_cache([ent], dirTwoHop, 'specialUse')#specialUse means to not write to the txt file
+
 
         if not specialUse:# to the prduct to generate {P1 P2,P3}
-            # product twohops of ent with each other of the same direction 
+            # product twohops of ent with each other of the same direction
             for cc1 in r_ent:
                 # cc1 -> [id, label]
-                for cc2 in r_twoHops_cc: 
+                for cc2 in r_twoHops_cc:
                     # cc2 -> [id, label]
                     r_all_twoHops_ids.append(cc1[0] + ", " + cc2[0])
                     r_all_twoHops_labels.append(cc1[1] + ", " + cc2[1])
@@ -786,8 +791,8 @@ def generate_prod_twoTE_corechain(entityIds_arr, prop_dir, specialUse=None):
                     # no comma between becuase its TwoHops
                     all_twoTE_twoHops_ids.append(cc1[0] + " " + cc2[0])
                     all_twoTE_twoHops_labels.append(cc1[1] + " " + cc2[1])
-       
-        elif specialUse == 'withoutProd':#to generate {P1 P2}  
+
+        elif specialUse == 'withoutProd':#to generate {P1 P2}
             if len(entityIds_arr) == 1: #if its one TE
                 for cc1 in r_oneHop_cc:
                     for cc2 in r_ent:
@@ -811,7 +816,7 @@ def generate_prod_twoTE_corechain(entityIds_arr, prop_dir, specialUse=None):
     for cc_label in all_twoTE_twoHops_labels:
         #split on space to get the sign of the middle predicat
         # ex: to get the sign of -P22 in ->  +P110 -P22, +P215 ....result is -
-        # split_ccId = all_twoTE_twoHops_ids[i].split() 
+        # split_ccId = all_twoTE_twoHops_ids[i].split()
         # ccSign = prop_sign1 + split_ccId[1][0] + ',' + prop_sign2
 
         cc_line = ', '.join(entityIds_arr).replace(
@@ -829,12 +834,12 @@ def generate_prod_twoTE_corechain(entityIds_arr, prop_dir, specialUse=None):
 
     return corechains
 
-#! genrate {ProdNoQualifier} corechains: TE1 P TE2 PQ1 Qual1, PQ2 Qul2 -> [+-P *PQ1, *PQ2] 
+#! genrate {ProdNoQualifier} corechains: TE1 P TE2 PQ1 Qual1, PQ2 Qul2 -> [+-P *PQ1, *PQ2]
 def generate_prod_quilifiers_corechain(entityIds_arr, qualifier_arr, prop_dir):
     prop_sign = "+"
     if(prop_dir == "left"):
         prop_sign = "-"
-    
+
     ccSign = prop_sign + '*,*'
     oneHopId_arr = []
     oneHopLabel_arr = []
@@ -847,13 +852,13 @@ def generate_prod_quilifiers_corechain(entityIds_arr, qualifier_arr, prop_dir):
         oneHop_id = cc[0].split(' *')
         if(oneHop_id[0] not in oneHopId_arr):
             oneHopId_arr.append(oneHop_id[0])
-        
+
         oneHop_label = cc[1].split(' *')
         if(oneHop_label[0] not in oneHopLabel_arr):
             oneHopLabel_arr.append(oneHop_label[0])
 
-    
-    
+
+
     # generate corechain in this form: -> +P0 *P1, *P2
     j = 0
     for oneHopId, oneHopLabel in zip(oneHopId_arr, oneHopLabel_arr): #+-P
@@ -877,17 +882,17 @@ def generate_prod_quilifiers_corechain(entityIds_arr, qualifier_arr, prop_dir):
             # ccId = oneHopId + " " + cc[0] + ", " + cc[0]
             # ccLabel = oneHopLabel + " " + cc[1] + ", " + cc[1]
             # prod_qualifier_ids.append(ccId)
-            # prod_qualifier_labels.append(ccLabel) 
+            # prod_qualifier_labels.append(ccLabel)
             # cc_line = ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + ccLabel + "\t" + ccId
-            # write_to_file(F_corechains_cache, cc_line) 
+            # write_to_file(F_corechains_cache, cc_line)
             for j in range(i+1, len(hyperRel_arr)):
                 ccId = oneHopId + " " + cc[0] + ", " + hyperRel_arr[j][0]
                 ccLabel = oneHopLabel + " " + cc[1] + ", " + hyperRel_arr[j][1]
                 prod_qualifier_ids.append(ccId)
-                prod_qualifier_labels.append(ccLabel) 
+                prod_qualifier_labels.append(ccLabel)
 
                 cc_line = ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + ccLabel + "\t" + ccId
-                write_to_file(F_corechains_cache, cc_line)   
+                write_to_file(F_corechains_cache, cc_line)
             i += 1
 
     corechains = list(zip(prod_qualifier_ids, prod_qualifier_labels))
@@ -912,9 +917,9 @@ def twoHops_product(entityIds_arr, twoHops_cc, highest_rank_cc, ccSign):
             ccId = cc[0] + ", " + highest_id
             ccLabel = cc[1] + ", " + highest_lbl
             twoHops_prod_ids.append(ccId)
-            twoHops_prod_labels.append(ccLabel) 
+            twoHops_prod_labels.append(ccLabel)
             cc_line = ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + ccLabel + "\t" + ccId
-            write_to_file(F_corechains_cache, cc_line)   
+            write_to_file(F_corechains_cache, cc_line)
 
 
     corechains = list(zip(twoHops_prod_ids, twoHops_prod_labels))
@@ -933,10 +938,10 @@ def oneHops_product(entityIds_arr, oneHops_cc, highest_rank_cc):
         ccId = cc[0] + ", " + highest_id
         ccLabel = cc[1] + ", " + highest_lbl
         oneHops_prod_ids.append(ccId)
-        oneHops_prod_labels.append(ccLabel) 
+        oneHops_prod_labels.append(ccLabel)
         ccSign = cc[0][0] + "," + highest_id[0]
         cc_line = ', '.join(entityIds_arr).replace('wd:', '') + "\t" + ccSign + "\t" + ccLabel + "\t" + ccId
-        write_to_file(F_corechains_cache, cc_line)   
+        write_to_file(F_corechains_cache, cc_line)
 
 
     corechains = list(zip(oneHops_prod_ids, oneHops_prod_labels))
@@ -982,7 +987,7 @@ def corechains_generation(question_val, entityId):
     highest_rank_oneHop_crossEn = lcquad_corechain(question_val, oneHop, "crossencoder") #get highest rank cc in all +,+
     print("highest_rank_oneHop_crossEn", highest_rank_oneHop_crossEn)
     prod_oneHops2 = oneHops_product(entityIds_arr, oneHop, highest_rank_oneHop_crossEn)
-    
+
     prod_oneHop_cc_ids = []
     prod_oneHop_labels = []
     for cc in prod_oneHops1:
@@ -1006,17 +1011,17 @@ def corechains_generation(question_val, entityId):
     # print("highest_id_sign", highest_id_sign)
     if highest_id_sign == "+":
         ##### [+P +P]
-        twoHops_dir = corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop_biEn, 'RR')   
+        twoHops_dir = corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop_biEn, 'RR')
     elif highest_id_sign == "-":
         ##### [-P +P]
-        twoHops_dir1 = corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop_biEn, 'LR') 
+        twoHops_dir1 = corechains_twoHops_cache(entityIds_arr, highest_rank_oneHop_biEn, 'LR')
 
 
         ####### add all second hop for P31 (in case P31 is not the highest rank)!
         none_rank_oneHop = ['-P31', '-instance of']
         twoHops_dir2 = []
         if highest_rank_oneHop_biEn[0] != none_rank_oneHop[0]:
-            twoHops_dir2 = corechains_twoHops_cache(entityIds_arr, none_rank_oneHop, 'LR') 
+            twoHops_dir2 = corechains_twoHops_cache(entityIds_arr, none_rank_oneHop, 'LR')
         ######## fill twoHops_dir with --> twoHops_dir1 and twoHops_dir2
         twoH_cc_ids = []
         twoH_cc_labels = []
@@ -1063,13 +1068,13 @@ def corechains_generation(question_val, entityId):
     for cc in twoHops_dir:
         cc_ids.append(cc[0])
         cc_labels.append(cc[1])
-    
+
     if highest_id_sign == "-":
         for cc in lr_prod_twoHops:
             cc_ids.append(cc[0])
             cc_labels.append(cc[1])
 
-    
+
     corechains = list(zip(cc_ids, cc_labels))
 
     # n = len(corechains) - 1
@@ -1081,7 +1086,7 @@ def corechains_generation(question_val, entityId):
     elapsed_time = time.time() - start_time
     print(elapsed_time)
 
-    
+
     return corechains
 
 

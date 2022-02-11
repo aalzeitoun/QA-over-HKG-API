@@ -1,3 +1,8 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 02/2022
+    Status: Production
+"""
+
 import requests
 from requests.structures import CaseInsensitiveDict
 

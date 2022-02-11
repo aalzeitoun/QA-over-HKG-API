@@ -1,3 +1,8 @@
+""" Author: Ahmad Alzeitoun, The University of Bonn
+    Date created: 07/2021
+    Status: Production
+"""
+
 import sys
 from SPARQLWrapper import SPARQLWrapper, JSON
 
@@ -19,13 +24,13 @@ query_right_oneHope = '''SELECT DISTINCT ?property ?propertyLabel
   WHERE {
     %(target_resource)s ?p ?statement .
     ?statement ?ps ?object .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
     }
-  }ORDER BY DESC(?property)  DESC(?hyperq) 
+  }ORDER BY DESC(?property)  DESC(?hyperq)
 '''
 
 #*----- Queries of left path ----- #?object ?objectLabel
@@ -33,7 +38,7 @@ query_left_oneHope = '''SELECT DISTINCT ?property ?propertyLabel
   WHERE {
     ?subject ?p ?statement .
     ?statement ?ps %(target_resource)s .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -44,11 +49,11 @@ query_left_oneHope = '''SELECT DISTINCT ?property ?propertyLabel
 #*==============================
 #*==============================
 #*----- Queries of hyperRel right path -----
-query_only_hyperRel_right = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel 
+query_only_hyperRel_right = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel
   WHERE {
     %(target_resource)s %(target_prop)s ?statement .
     ?statement ?ps %(target_resource2)s .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -56,15 +61,15 @@ query_only_hyperRel_right = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq 
     ?hyperq wikibase:qualifier ?pq .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
     }
-  }ORDER BY DESC(?property)  DESC(?hyperq) 
+  }ORDER BY DESC(?property)  DESC(?hyperq)
 '''
 
 #*----- Queries of hyperRel left path -----
-query_only_hyperRel_left = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel 
+query_only_hyperRel_left = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel
   WHERE {
     %(target_resource2)s %(target_prop)s ?statement .
     ?statement ?ps %(target_resource)s .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -77,11 +82,11 @@ query_only_hyperRel_left = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?
 #*==============================
 #*==============================
 #*----- Queries of hyperRel where two TE as qualifiers -----
-query_twoTE_as_qualifiers = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel ?hyperq2 ?hyperq2Label 
+query_twoTE_as_qualifiers = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel ?hyperq2 ?hyperq2Label
   WHERE {
     ?val1 ?p ?statement .
     ?statement ?ps ?val2 .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -91,15 +96,15 @@ query_twoTE_as_qualifiers = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq 
     ?hyperq2 wikibase:qualifier ?pq2 .
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
     }
-  }ORDER BY DESC(?property)  DESC(?hyperq) 
+  }ORDER BY DESC(?property)  DESC(?hyperq)
 '''
 #==================================NOT USED=====================================
 #*----- Queries of Right path ----- #?object ?objectLabel
-query_right_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel 
+query_right_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel
   WHERE {
     %(target_resource)s ?p ?statement .
     ?statement ?ps ?object .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -109,15 +114,15 @@ query_right_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?
     }
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".
     }
-  }ORDER BY DESC(?property)  DESC(?hyperq) 
+  }ORDER BY DESC(?property)  DESC(?hyperq)
 '''
 
 #*----- Queries of left path ----- #?object ?objectLabel
-query_left_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel 
+query_left_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?hyperqLabel
   WHERE {
     ?subject ?p ?statement .
     ?statement ?ps %(target_resource)s .
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
     %(filter_in)s
@@ -132,59 +137,59 @@ query_left_and_hyperRel = '''SELECT DISTINCT ?property ?propertyLabel ?hyperq ?h
 #*==============================
 #*==============================
 #*----- Queries of Right Right path twoHops ----- TE P1 OBJ1 - OBJ1 P2 OBJ2/TE2
-query_RR_twoHops = '''SELECT DISTINCT  %(selectQ)s 
-    WHERE {   
+query_RR_twoHops = '''SELECT DISTINCT  %(selectQ)s
+    WHERE {
     %(target_resource)s  %(p1)s ?obj1;
           rdfs:label ?obj1Label.
     ?obj1 ?p2  %(target_resource2)s.
     FILTER(LANG(?obj1Label) = "en").
-    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
     %(directClaim)s
 
      }LIMIT 10000'''
 #*----- Queries of Right Left path twoHops ----- TE P1 OBJ1 - OBJ2/TE2 P2 OBJ1
-query_RL_twoHops = '''SELECT DISTINCT  %(selectQ)s  
-    WHERE {   
+query_RL_twoHops = '''SELECT DISTINCT  %(selectQ)s
+    WHERE {
     %(target_resource)s  %(p1)s ?obj1;
           rdfs:label ?obj1Label.
     %(target_resource2)s  ?p2 ?obj1.
     FILTER(LANG(?obj1Label) = "en").
-    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
     %(directClaim)s
     }LIMIT 10000'''
 
 #*----- Queries of Left Right path twoHops ----- OBJ1 P1 TE - OBJ1 P2 OBJ2/TE2
-query_LR_twoHops = '''SELECT DISTINCT  %(selectQ)s 
-    WHERE {   
+query_LR_twoHops = '''SELECT DISTINCT  %(selectQ)s
+    WHERE {
     ?obj1 %(p1)s %(target_resource)s;
           rdfs:label ?obj1Label.
     ?obj1 ?p2 %(target_resource2)s.
     FILTER(LANG(?obj1Label) = "en").
-    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
     %(directClaim)s
     }LIMIT 10000'''
 #*----- Queries of Left Left path twoHops ----- OBJ1 P1 TE - OBJ2/TE2 P2 OBJ1
-query_LL_twoHops = '''SELECT DISTINCT  %(selectQ)s 
-    WHERE {   
+query_LL_twoHops = '''SELECT DISTINCT  %(selectQ)s
+    WHERE {
     ?obj1 %(p1)s %(target_resource)s;
           rdfs:label ?obj1Label.
     %(target_resource2)s  ?p2 ?obj1.
     FILTER(LANG(?obj1Label) = "en").
-    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". } 
+    #SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
     %(directClaim)s
      }LIMIT 10000'''
 #*==============================
 #*==============================
 #* TE P1 OBJ1 - OBJ1 P2 OBJ2 - OBJ1 P3 TE2
 #* P1 P2, P3
-#*----- Queries of Right Right path twoHops Prod ----- 
+#*----- Queries of Right Right path twoHops Prod -----
 query_RR_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
-    WHERE {   
+    WHERE {
     %(target_resource)s  ?p1 ?obj1;
           rdfs:label ?obj1Label.
     ?obj1 ?p2  %(target_resource2)s.
     %(prod_statement)s
-    
+
     FILTER(LANG(?obj1Label) = "en").
     FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) .
     FILTER(STRSTARTS(str(?p3), 'http://www.wikidata.org/prop/direct/')) .
@@ -192,12 +197,12 @@ query_RR_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
      }LIMIT 10000'''
 
 query_RL_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
-    WHERE {   
+    WHERE {
     %(target_resource)s  ?p1 ?obj1;
           rdfs:label ?obj1Label.
     %(target_resource2)s ?p2  ?obj1.
     %(prod_statement)s
-    
+
     FILTER(LANG(?obj1Label) = "en").
     FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) .
     FILTER(STRSTARTS(str(?p3), 'http://www.wikidata.org/prop/direct/')) .
@@ -205,24 +210,24 @@ query_RL_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
      }LIMIT 10000'''
 
 query_LR_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
-    WHERE {   
+    WHERE {
    ?obj1 ?p1 %(target_resource)s ;
           rdfs:label ?obj1Label.
     ?obj1 ?p2 %(target_resource2)s.
     %(prod_statement)s
-    
+
     FILTER(LANG(?obj1Label) = "en").
     FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) .
     FILTER(STRSTARTS(str(?p3), 'http://www.wikidata.org/prop/direct/')) .
     %(emb_filter)s
      }LIMIT 10000'''
 query_LL_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
-    WHERE {   
+    WHERE {
    ?obj1 ?p1 %(target_resource)s ;
           rdfs:label ?obj1Label.
     %(target_resource2)s ?p2  ?obj1.
     %(prod_statement)s
-    
+
     FILTER(LANG(?obj1Label) = "en").
     FILTER(STRSTARTS(str(?p2), 'http://www.wikidata.org/prop/direct/')) .
     FILTER(STRSTARTS(str(?p3), 'http://www.wikidata.org/prop/direct/')) .
@@ -233,31 +238,31 @@ query_LL_prod_twoHops = '''SELECT DISTINCT  ?obj1 ?p1 ?p2 ?p3
 #*==============================
 #*----- Two TE Queries of Right Right path ----- TE1 P1 OBJ1 - OBJ1 P2 TE2
 query_RR_twoTE = '''SELECT DISTINCT  ?obj1
-    WHERE {   
+    WHERE {
     %(target_resource)s %(target_prop)s ?obj1; rdfs:label ?obj1Label.
-    ?obj1 ?p2 %(target_resource2)s. 
+    ?obj1 ?p2 %(target_resource2)s.
     FILTER(LANG(?obj1Label) = "en").
     }LIMIT 1000'''
 
 #*----- Two TE Queries of Right Left path ----- TE1 P1 OBJ1 - TE2 P2 OBJ1
 query_RL_twoTE = '''SELECT DISTINCT  ?obj1
-    WHERE {   
+    WHERE {
     %(target_resource)s %(target_prop)s ?obj1; rdfs:label ?obj1Label.
-    %(target_resource2)s ?p2 ?obj1. 
+    %(target_resource2)s ?p2 ?obj1.
     FILTER(LANG(?obj1Label) = "en").
     }LIMIT 1000'''
 #*----- Two TE Queries of Left Right path ----- OBJ1 P1 TE1 - OBJ1 P2 TE2
 query_LR_twoTE = '''SELECT DISTINCT  ?obj1
-    WHERE {   
+    WHERE {
     ?obj1 %(target_prop)s %(target_resource)s; rdfs:label ?obj1Label.
-    ?obj1 ?p2 %(target_resource2)s. 
+    ?obj1 ?p2 %(target_resource2)s.
     FILTER(LANG(?obj1Label) = "en").
     }LIMIT 1000'''
 #*----- Two TE Queries of Left Left path ----- OBJ1 P1 TE1 - TE2 P2 OBJ1
 query_LL_twoTE = '''SELECT DISTINCT  ?obj1
-    WHERE {   
+    WHERE {
     ?obj1 %(target_prop)s %(target_resource)s; rdfs:label ?obj1Label.
-    %(target_resource2)s ?p2 ?obj1. 
+    %(target_resource2)s ?p2 ?obj1.
     FILTER(LANG(?obj1Label) = "en").
     }LIMIT 1000'''
 #*==============================
@@ -267,7 +272,7 @@ query_right_twoTE = '''SELECT DISTINCT  ?property ?propertyLabel
     WHERE {
     %(target_resource)s ?p ?statement .
     ?statement ?ps %(target_resource2)s.
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
 
@@ -279,7 +284,7 @@ query_left_twoTE = '''SELECT DISTINCT  ?property ?propertyLabel
     WHERE {
     %(target_resource2)s ?p ?statement .
     ?statement ?ps %(target_resource)s.
-    
+
     ?property wikibase:claim ?p.
     ?property wikibase:statementProperty ?ps.
 
@@ -287,8 +292,8 @@ query_left_twoTE = '''SELECT DISTINCT  ?property ?propertyLabel
     SERVICE wikibase:label { bd:serviceParam wikibase:language "en".}
     }'''
 
-query_get_label_topicEntity = '''SELECT DISTINCT ?label  
-WHERE { %(target_resource)s rdfs:label ?label .FILTER (langMatches( lang(?label), "EN" ) )} 
+query_get_label_topicEntity = '''SELECT DISTINCT ?label
+WHERE { %(target_resource)s rdfs:label ?label .FILTER (langMatches( lang(?label), "EN" ) )}
 LIMIT 1
 '''
 
@@ -485,7 +490,7 @@ def dict_lcquad_predicates(dir):
         "lcquad_props_not_in_filters": filter_not_in,
         # LCQuAD predicates in 20 groups
         "lcquad_props_all_groups": lcquad_props_all_groups,
-        "exclude_props": exclude_props, 
+        "exclude_props": exclude_props,
         "exclude_props_ids": exclude_props_ids
     }
     # print(lcquad_props_filters[19])
@@ -588,7 +593,7 @@ def lcquad_ds(quesID, dsType):
   for line in out:
       i += 1
       arguments = line.split("\t")
-      # arguments[0]:uid   arguments[1]:TempId    arguments[2]: TEs 
+      # arguments[0]:uid   arguments[1]:TempId    arguments[2]: TEs
       # arguments[3]:answerCC   arguments[4]: Question
       qUID = arguments[0]
       if quesID == qUID :
@@ -599,5 +604,5 @@ def lcquad_ds(quesID, dsType):
         lcquadQues_Query = arguments[5].replace('\n', '')
         #add them to a list
         lcquad_line_arr = [qUID, tempID, entityIds, answerCC, lcquadQues, lcquadQues_Query]
-      
+
   return lcquad_line_arr
