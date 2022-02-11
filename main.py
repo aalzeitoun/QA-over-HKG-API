@@ -22,24 +22,3 @@ async def create_item(question: Question_para):
         top_corechain, sparqlQuery = question_answering(question.question_txt, question.topic_entity_id)
         question_dict.update({"top_corechain": top_corechain, "sparqlQuery": sparqlQuery})
     return question_dict
-
-
-
-
-
-'''
-{
-    "name": "Foo",
-    "description": "An optional description",
-    "price": 45.2,
-    "tax": 3.5
-}
-'''
-
-
-'''
-{
-    "question_txt": "What is your name?",
-    "topic_entity_id": "Q3035"
-}
-'''
