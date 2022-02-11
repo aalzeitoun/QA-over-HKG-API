@@ -28,7 +28,7 @@ The pretrained models should be existed under model folder, the folder is empty 
 
 ### Executing program
 
-* Run the API App main.py (as a server):
+* Run the API main.py (as a server):
 ```
 $ uvicorn main:app --reload
 ```
@@ -49,7 +49,7 @@ JSON sent to the API:
 }
 ```
 
-JSON received from API app:
+JSON received from API:
 ```
 {
     "question_txt": "Which is the sports award that Lionel Messi was awarded?",
