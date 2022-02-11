@@ -1,0 +1,663 @@
+Q615	+	+Biblioteca Nacional de España ID	+P950
+Q615	+	+National Library of Israel ID	+P949
+Q615	+	+topic's main category	+P910
+Q615	+	+SELIBR ID	+P906
+Q615	+	+official website	+P856
+Q615	+	+significant event	+P793
+Q615	+	+given name	+P735
+Q615	+	+family name	+P734
+Q615	+	+NKCR AUT ID	+P691
+Q615	+	+total goals in career	+P6509
+Q615	+	+Freebase ID	+P646
+Q615	+	+sport	+P641
+Q615	+	+date of birth	+P569
+Q615	+	+residence	+P551
+Q615	+	+Trading Card Database person ID	+P5421
+Q615	+	+Giant Bomb ID	+P5247
+Q615	+	+National Library of Korea ID	+P5034
+Q615	+	+Brockhaus Enzyklopädie online ID	+P5019
+Q615	+	+TMDb person ID	+P4985
+Q615	+	+CineMagia person ID	+P4666
+Q615	+	+National Library of Brazil ID	+P4619
+Q615	+	+Sportbox.ru ID	+P4421
+Q615	+	+Store norske leksikon ID	+P4342
+Q615	+	+position played on team / speciality	+P413
+Q615	+	+Artnet artist ID	+P3782
+Q615	+	+Commons category	+P373
+Q615	+	+ESPNFC.com player ID	+P3681
+Q615	+	+L'Équipe football player ID	+P3665
+Q615	+	+FootballFacts.ru player ID	+P3660
+Q615	+	+BDFutbol player ID	+P3655
+Q615	+	+base salary	+P3618
+Q615	+	+FootballDatabase.eu player ID	+P3537
+Q615	+	+Dagens Nyheter topic ID	+P3509
+Q615	+	+National Diet Library ID	+P349
+Q615	+	+Omni topic ID	+P3479
+Q615	+	+IMDb ID	+P345
+Q615	+	+AS.com athlete ID	+P3427
+Q615	+	+Quora topic ID	+P3417
+Q615	+	+LittleSis people ID	+P3388
+Q615	+	+Treccani ID	+P3365
+Q615	+	+National Library of Greece ID	+P3348
+Q615	+	+significant person	+P3342
+Q615	+	+NE.se ID	+P3222
+Q615	+	+New York Times topic ID	+P3221
+Q615	+	+Encyclopædia Universalis ID	+P3219
+Q615	+	+Wall Street Journal topic ID	+P3183
+Q615	+	+RERO ID	+P3065
+Q615	+	+PlaymakerStats.com player ID	+P3047
+Q615	+	+Great Russian Encyclopedia Online ID	+P2924
+Q615	+	+IdRef ID	+P269
+Q615	+	+Bibliothèque nationale de France ID	+P268
+Q615	+	+ČSFD person ID	+P2605
+Q615	+	+Kinopoisk person ID	+P2604
+Q615	+	+National-Football-Teams.com player ID	+P2574
+Q615	+	+Mackolik.com player ID	+P2458
+Q615	+	+Transfermarkt player ID	+P2446
+Q615	+	+YouTube channel ID	+P2397
+Q615	+	+Soccerway player ID	+P2369
+Q615	+	+UEFA player ID	+P2276
+Q615	+	+Soccerbase player ID	+P2193
+Q615	+	+Swedish Film Database person ID	+P2168
+Q615	+	+FAST ID	+P2163
+Q615	+	+mass	+P2067
+Q615	+	+height	+P2048
+Q615	+	+work period (start)	+P2031
+Q615	+	+WorldFootball.net player ID	+P2020
+Q615	+	+AllMovie person ID	+P2019
+Q615	+	+Facebook ID	+P2013
+Q615	+	+Instagram username	+P2003
+Q615	+	+Twitter username	+P2002
+Q615	+	+number of children	+P1971
+Q615	+	+CCAB ID	+P1890
+Q615	+	+short name	+P1813
+Q615	+	+GTAA ID	+P1741
+Q615	+	+NLP ID (unique)	+P1695
+Q615	+	+sport number	+P1618
+Q615	+	+defender	+P1593
+Q615	+	+name in native language	+P1559
+Q615	+	+country for sport	+P1532
+Q615	+	+birth name	+P1477
+Q615	+	+FIFA player ID	+P1469
+Q615	+	+Sports-Reference.com Olympic athlete ID	+P1447
+Q615	+	+Encyclopædia Britannica Online ID	+P1417
+Q615	+	+languages spoken, written or signed	+P1412
+Q615	+	+convicted of	+P1399
+Q615	+	+NSK ID	+P1375
+Q615	+	+LNB ID	+P1368
+Q615	+	+number of matches played/races/starts	+P1350
+Q615	+	+participant in	+P1344
+Q615	+	+described by source	+P1343
+Q615	+	+Gran Enciclopèdia Catalana ID	+P1296
+Q615	+	+Munzinger Sport number	+P1285
+Q615	+	+CANTIC ID (old)	+P1273
+Q615	+	+AlloCiné person ID	+P1266
+Q615	+	+NNDB people ID	+P1263
+Q615	+	+relative	+P1038
+Q615	+	+NORAF ID	+P1015
+Q615	+	+Nationale Thesaurus voor Auteurs ID	+P1006
+Q615	+	+member of sports team	+P54
+Q615	+	+child	+P40
+Q615	+	+position held	+P39
+Q615	+	+instance of	+P31
+Q615	+	+country of citizenship	+P27
+Q615	+	+spouse	+P26
+Q615	+	+Library of Congress authority ID	+P244
+Q615	+	+GND ID	+P227
+Q615	+	+father	+P22
+Q615	+	+VIAF ID	+P214
+Q615	+	+ISNI	+P213
+Q615	+	+sex or gender	+P21
+Q615	+	+place of birth	+P19
+Q615	+	+image	+P18
+Q615	+	+ethnic group	+P172
+Q615	+	+award received	+P166
+Q615	+	+employer	+P108
+Q615	+	+occupation	+P106
+Q615	+	+native language	+P103
+Q615	-	-main subject	-P921
+Q615	-	-participant	-P710
+Q615	-	-captain	-P634
+Q615	-	-significant person	-P3342
+Q615	-	-statistical leader	-P3279
+Q615	-	-category's main topic	-P301
+Q615	-	-Wikidata property example	-P1855
+Q615	-	-defendant	-P1591
+Q615	-	-points/goal scored by	-P1363
+Q615	-	-winner	-P1346
+Q615	-	-office held by head of government	-P1313
+Q615	-	-child	-P40
+Q615	-	-father	-P22
+Q615	-	-creator	-P170
+Q615	-	-country	-P17
+Q615	-	-cast member	-P161
+Q615	-	-located in the administrative territorial entity	-P131
+Q615	+,+	+Biblioteca Nacional de España ID, +award received	+P950, +P166
+Q615	+,+	+National Library of Israel ID, +award received	+P949, +P166
+Q615	+,+	+topic's main category, +award received	+P910, +P166
+Q615	+,+	+SELIBR ID, +award received	+P906, +P166
+Q615	+,+	+official website, +award received	+P856, +P166
+Q615	+,+	+significant event, +award received	+P793, +P166
+Q615	+,+	+given name, +award received	+P735, +P166
+Q615	+,+	+family name, +award received	+P734, +P166
+Q615	+,+	+NKCR AUT ID, +award received	+P691, +P166
+Q615	+,+	+total goals in career, +award received	+P6509, +P166
+Q615	+,+	+Freebase ID, +award received	+P646, +P166
+Q615	+,+	+sport, +award received	+P641, +P166
+Q615	+,+	+date of birth, +award received	+P569, +P166
+Q615	+,+	+residence, +award received	+P551, +P166
+Q615	+,+	+Trading Card Database person ID, +award received	+P5421, +P166
+Q615	+,+	+Giant Bomb ID, +award received	+P5247, +P166
+Q615	+,+	+National Library of Korea ID, +award received	+P5034, +P166
+Q615	+,+	+Brockhaus Enzyklopädie online ID, +award received	+P5019, +P166
+Q615	+,+	+TMDb person ID, +award received	+P4985, +P166
+Q615	+,+	+CineMagia person ID, +award received	+P4666, +P166
+Q615	+,+	+National Library of Brazil ID, +award received	+P4619, +P166
+Q615	+,+	+Sportbox.ru ID, +award received	+P4421, +P166
+Q615	+,+	+Store norske leksikon ID, +award received	+P4342, +P166
+Q615	+,+	+position played on team / speciality, +award received	+P413, +P166
+Q615	+,+	+Artnet artist ID, +award received	+P3782, +P166
+Q615	+,+	+Commons category, +award received	+P373, +P166
+Q615	+,+	+ESPNFC.com player ID, +award received	+P3681, +P166
+Q615	+,+	+L'Équipe football player ID, +award received	+P3665, +P166
+Q615	+,+	+FootballFacts.ru player ID, +award received	+P3660, +P166
+Q615	+,+	+BDFutbol player ID, +award received	+P3655, +P166
+Q615	+,+	+base salary, +award received	+P3618, +P166
+Q615	+,+	+FootballDatabase.eu player ID, +award received	+P3537, +P166
+Q615	+,+	+Dagens Nyheter topic ID, +award received	+P3509, +P166
+Q615	+,+	+National Diet Library ID, +award received	+P349, +P166
+Q615	+,+	+Omni topic ID, +award received	+P3479, +P166
+Q615	+,+	+IMDb ID, +award received	+P345, +P166
+Q615	+,+	+AS.com athlete ID, +award received	+P3427, +P166
+Q615	+,+	+Quora topic ID, +award received	+P3417, +P166
+Q615	+,+	+LittleSis people ID, +award received	+P3388, +P166
+Q615	+,+	+Treccani ID, +award received	+P3365, +P166
+Q615	+,+	+National Library of Greece ID, +award received	+P3348, +P166
+Q615	+,+	+significant person, +award received	+P3342, +P166
+Q615	+,+	+NE.se ID, +award received	+P3222, +P166
+Q615	+,+	+New York Times topic ID, +award received	+P3221, +P166
+Q615	+,+	+Encyclopædia Universalis ID, +award received	+P3219, +P166
+Q615	+,+	+Wall Street Journal topic ID, +award received	+P3183, +P166
+Q615	+,+	+RERO ID, +award received	+P3065, +P166
+Q615	+,+	+PlaymakerStats.com player ID, +award received	+P3047, +P166
+Q615	+,+	+Great Russian Encyclopedia Online ID, +award received	+P2924, +P166
+Q615	+,+	+IdRef ID, +award received	+P269, +P166
+Q615	+,+	+Bibliothèque nationale de France ID, +award received	+P268, +P166
+Q615	+,+	+ČSFD person ID, +award received	+P2605, +P166
+Q615	+,+	+Kinopoisk person ID, +award received	+P2604, +P166
+Q615	+,+	+National-Football-Teams.com player ID, +award received	+P2574, +P166
+Q615	+,+	+Mackolik.com player ID, +award received	+P2458, +P166
+Q615	+,+	+Transfermarkt player ID, +award received	+P2446, +P166
+Q615	+,+	+YouTube channel ID, +award received	+P2397, +P166
+Q615	+,+	+Soccerway player ID, +award received	+P2369, +P166
+Q615	+,+	+UEFA player ID, +award received	+P2276, +P166
+Q615	+,+	+Soccerbase player ID, +award received	+P2193, +P166
+Q615	+,+	+Swedish Film Database person ID, +award received	+P2168, +P166
+Q615	+,+	+FAST ID, +award received	+P2163, +P166
+Q615	+,+	+mass, +award received	+P2067, +P166
+Q615	+,+	+height, +award received	+P2048, +P166
+Q615	+,+	+work period (start), +award received	+P2031, +P166
+Q615	+,+	+WorldFootball.net player ID, +award received	+P2020, +P166
+Q615	+,+	+AllMovie person ID, +award received	+P2019, +P166
+Q615	+,+	+Facebook ID, +award received	+P2013, +P166
+Q615	+,+	+Instagram username, +award received	+P2003, +P166
+Q615	+,+	+Twitter username, +award received	+P2002, +P166
+Q615	+,+	+number of children, +award received	+P1971, +P166
+Q615	+,+	+CCAB ID, +award received	+P1890, +P166
+Q615	+,+	+short name, +award received	+P1813, +P166
+Q615	+,+	+GTAA ID, +award received	+P1741, +P166
+Q615	+,+	+NLP ID (unique), +award received	+P1695, +P166
+Q615	+,+	+sport number, +award received	+P1618, +P166
+Q615	+,+	+defender, +award received	+P1593, +P166
+Q615	+,+	+name in native language, +award received	+P1559, +P166
+Q615	+,+	+country for sport, +award received	+P1532, +P166
+Q615	+,+	+birth name, +award received	+P1477, +P166
+Q615	+,+	+FIFA player ID, +award received	+P1469, +P166
+Q615	+,+	+Sports-Reference.com Olympic athlete ID, +award received	+P1447, +P166
+Q615	+,+	+Encyclopædia Britannica Online ID, +award received	+P1417, +P166
+Q615	+,+	+languages spoken, written or signed, +award received	+P1412, +P166
+Q615	+,+	+convicted of, +award received	+P1399, +P166
+Q615	+,+	+NSK ID, +award received	+P1375, +P166
+Q615	+,+	+LNB ID, +award received	+P1368, +P166
+Q615	+,+	+number of matches played/races/starts, +award received	+P1350, +P166
+Q615	+,+	+participant in, +award received	+P1344, +P166
+Q615	+,+	+described by source, +award received	+P1343, +P166
+Q615	+,+	+Gran Enciclopèdia Catalana ID, +award received	+P1296, +P166
+Q615	+,+	+Munzinger Sport number, +award received	+P1285, +P166
+Q615	+,+	+CANTIC ID (old), +award received	+P1273, +P166
+Q615	+,+	+AlloCiné person ID, +award received	+P1266, +P166
+Q615	+,+	+NNDB people ID, +award received	+P1263, +P166
+Q615	+,+	+relative, +award received	+P1038, +P166
+Q615	+,+	+NORAF ID, +award received	+P1015, +P166
+Q615	+,+	+Nationale Thesaurus voor Auteurs ID, +award received	+P1006, +P166
+Q615	+,+	+member of sports team, +award received	+P54, +P166
+Q615	+,+	+child, +award received	+P40, +P166
+Q615	+,+	+position held, +award received	+P39, +P166
+Q615	+,+	+instance of, +award received	+P31, +P166
+Q615	+,+	+country of citizenship, +award received	+P27, +P166
+Q615	+,+	+spouse, +award received	+P26, +P166
+Q615	+,+	+Library of Congress authority ID, +award received	+P244, +P166
+Q615	+,+	+GND ID, +award received	+P227, +P166
+Q615	+,+	+father, +award received	+P22, +P166
+Q615	+,+	+VIAF ID, +award received	+P214, +P166
+Q615	+,+	+ISNI, +award received	+P213, +P166
+Q615	+,+	+sex or gender, +award received	+P21, +P166
+Q615	+,+	+place of birth, +award received	+P19, +P166
+Q615	+,+	+image, +award received	+P18, +P166
+Q615	+,+	+ethnic group, +award received	+P172, +P166
+Q615	+,+	+award received, +award received	+P166, +P166
+Q615	+,+	+employer, +award received	+P108, +P166
+Q615	+,+	+occupation, +award received	+P106, +P166
+Q615	+,+	+native language, +award received	+P103, +P166
+Q615	-,+	-main subject, +award received	-P921, +P166
+Q615	-,+	-participant, +award received	-P710, +P166
+Q615	-,+	-captain, +award received	-P634, +P166
+Q615	-,+	-significant person, +award received	-P3342, +P166
+Q615	-,+	-statistical leader, +award received	-P3279, +P166
+Q615	-,+	-category's main topic, +award received	-P301, +P166
+Q615	-,+	-Wikidata property example, +award received	-P1855, +P166
+Q615	-,+	-defendant, +award received	-P1591, +P166
+Q615	-,+	-points/goal scored by, +award received	-P1363, +P166
+Q615	-,+	-winner, +award received	-P1346, +P166
+Q615	-,+	-office held by head of government, +award received	-P1313, +P166
+Q615	-,+	-child, +award received	-P40, +P166
+Q615	-,+	-father, +award received	-P22, +P166
+Q615	-,+	-creator, +award received	-P170, +P166
+Q615	-,+	-country, +award received	-P17, +P166
+Q615	-,+	-cast member, +award received	-P161, +P166
+Q615	-,+	-located in the administrative territorial entity, +award received	-P131, +P166
+Q615	+,+	+Biblioteca Nacional de España ID, +Swedish Film Database person ID	+P950, +P2168
+Q615	+,+	+National Library of Israel ID, +Swedish Film Database person ID	+P949, +P2168
+Q615	+,+	+topic's main category, +Swedish Film Database person ID	+P910, +P2168
+Q615	+,+	+SELIBR ID, +Swedish Film Database person ID	+P906, +P2168
+Q615	+,+	+official website, +Swedish Film Database person ID	+P856, +P2168
+Q615	+,+	+significant event, +Swedish Film Database person ID	+P793, +P2168
+Q615	+,+	+given name, +Swedish Film Database person ID	+P735, +P2168
+Q615	+,+	+family name, +Swedish Film Database person ID	+P734, +P2168
+Q615	+,+	+NKCR AUT ID, +Swedish Film Database person ID	+P691, +P2168
+Q615	+,+	+total goals in career, +Swedish Film Database person ID	+P6509, +P2168
+Q615	+,+	+Freebase ID, +Swedish Film Database person ID	+P646, +P2168
+Q615	+,+	+sport, +Swedish Film Database person ID	+P641, +P2168
+Q615	+,+	+date of birth, +Swedish Film Database person ID	+P569, +P2168
+Q615	+,+	+residence, +Swedish Film Database person ID	+P551, +P2168
+Q615	+,+	+Trading Card Database person ID, +Swedish Film Database person ID	+P5421, +P2168
+Q615	+,+	+Giant Bomb ID, +Swedish Film Database person ID	+P5247, +P2168
+Q615	+,+	+National Library of Korea ID, +Swedish Film Database person ID	+P5034, +P2168
+Q615	+,+	+Brockhaus Enzyklopädie online ID, +Swedish Film Database person ID	+P5019, +P2168
+Q615	+,+	+TMDb person ID, +Swedish Film Database person ID	+P4985, +P2168
+Q615	+,+	+CineMagia person ID, +Swedish Film Database person ID	+P4666, +P2168
+Q615	+,+	+National Library of Brazil ID, +Swedish Film Database person ID	+P4619, +P2168
+Q615	+,+	+Sportbox.ru ID, +Swedish Film Database person ID	+P4421, +P2168
+Q615	+,+	+Store norske leksikon ID, +Swedish Film Database person ID	+P4342, +P2168
+Q615	+,+	+position played on team / speciality, +Swedish Film Database person ID	+P413, +P2168
+Q615	+,+	+Artnet artist ID, +Swedish Film Database person ID	+P3782, +P2168
+Q615	+,+	+Commons category, +Swedish Film Database person ID	+P373, +P2168
+Q615	+,+	+ESPNFC.com player ID, +Swedish Film Database person ID	+P3681, +P2168
+Q615	+,+	+L'Équipe football player ID, +Swedish Film Database person ID	+P3665, +P2168
+Q615	+,+	+FootballFacts.ru player ID, +Swedish Film Database person ID	+P3660, +P2168
+Q615	+,+	+BDFutbol player ID, +Swedish Film Database person ID	+P3655, +P2168
+Q615	+,+	+base salary, +Swedish Film Database person ID	+P3618, +P2168
+Q615	+,+	+FootballDatabase.eu player ID, +Swedish Film Database person ID	+P3537, +P2168
+Q615	+,+	+Dagens Nyheter topic ID, +Swedish Film Database person ID	+P3509, +P2168
+Q615	+,+	+National Diet Library ID, +Swedish Film Database person ID	+P349, +P2168
+Q615	+,+	+Omni topic ID, +Swedish Film Database person ID	+P3479, +P2168
+Q615	+,+	+IMDb ID, +Swedish Film Database person ID	+P345, +P2168
+Q615	+,+	+AS.com athlete ID, +Swedish Film Database person ID	+P3427, +P2168
+Q615	+,+	+Quora topic ID, +Swedish Film Database person ID	+P3417, +P2168
+Q615	+,+	+LittleSis people ID, +Swedish Film Database person ID	+P3388, +P2168
+Q615	+,+	+Treccani ID, +Swedish Film Database person ID	+P3365, +P2168
+Q615	+,+	+National Library of Greece ID, +Swedish Film Database person ID	+P3348, +P2168
+Q615	+,+	+significant person, +Swedish Film Database person ID	+P3342, +P2168
+Q615	+,+	+NE.se ID, +Swedish Film Database person ID	+P3222, +P2168
+Q615	+,+	+New York Times topic ID, +Swedish Film Database person ID	+P3221, +P2168
+Q615	+,+	+Encyclopædia Universalis ID, +Swedish Film Database person ID	+P3219, +P2168
+Q615	+,+	+Wall Street Journal topic ID, +Swedish Film Database person ID	+P3183, +P2168
+Q615	+,+	+RERO ID, +Swedish Film Database person ID	+P3065, +P2168
+Q615	+,+	+PlaymakerStats.com player ID, +Swedish Film Database person ID	+P3047, +P2168
+Q615	+,+	+Great Russian Encyclopedia Online ID, +Swedish Film Database person ID	+P2924, +P2168
+Q615	+,+	+IdRef ID, +Swedish Film Database person ID	+P269, +P2168
+Q615	+,+	+Bibliothèque nationale de France ID, +Swedish Film Database person ID	+P268, +P2168
+Q615	+,+	+ČSFD person ID, +Swedish Film Database person ID	+P2605, +P2168
+Q615	+,+	+Kinopoisk person ID, +Swedish Film Database person ID	+P2604, +P2168
+Q615	+,+	+National-Football-Teams.com player ID, +Swedish Film Database person ID	+P2574, +P2168
+Q615	+,+	+Mackolik.com player ID, +Swedish Film Database person ID	+P2458, +P2168
+Q615	+,+	+Transfermarkt player ID, +Swedish Film Database person ID	+P2446, +P2168
+Q615	+,+	+YouTube channel ID, +Swedish Film Database person ID	+P2397, +P2168
+Q615	+,+	+Soccerway player ID, +Swedish Film Database person ID	+P2369, +P2168
+Q615	+,+	+UEFA player ID, +Swedish Film Database person ID	+P2276, +P2168
+Q615	+,+	+Soccerbase player ID, +Swedish Film Database person ID	+P2193, +P2168
+Q615	+,+	+Swedish Film Database person ID, +Swedish Film Database person ID	+P2168, +P2168
+Q615	+,+	+FAST ID, +Swedish Film Database person ID	+P2163, +P2168
+Q615	+,+	+mass, +Swedish Film Database person ID	+P2067, +P2168
+Q615	+,+	+height, +Swedish Film Database person ID	+P2048, +P2168
+Q615	+,+	+work period (start), +Swedish Film Database person ID	+P2031, +P2168
+Q615	+,+	+WorldFootball.net player ID, +Swedish Film Database person ID	+P2020, +P2168
+Q615	+,+	+AllMovie person ID, +Swedish Film Database person ID	+P2019, +P2168
+Q615	+,+	+Facebook ID, +Swedish Film Database person ID	+P2013, +P2168
+Q615	+,+	+Instagram username, +Swedish Film Database person ID	+P2003, +P2168
+Q615	+,+	+Twitter username, +Swedish Film Database person ID	+P2002, +P2168
+Q615	+,+	+number of children, +Swedish Film Database person ID	+P1971, +P2168
+Q615	+,+	+CCAB ID, +Swedish Film Database person ID	+P1890, +P2168
+Q615	+,+	+short name, +Swedish Film Database person ID	+P1813, +P2168
+Q615	+,+	+GTAA ID, +Swedish Film Database person ID	+P1741, +P2168
+Q615	+,+	+NLP ID (unique), +Swedish Film Database person ID	+P1695, +P2168
+Q615	+,+	+sport number, +Swedish Film Database person ID	+P1618, +P2168
+Q615	+,+	+defender, +Swedish Film Database person ID	+P1593, +P2168
+Q615	+,+	+name in native language, +Swedish Film Database person ID	+P1559, +P2168
+Q615	+,+	+country for sport, +Swedish Film Database person ID	+P1532, +P2168
+Q615	+,+	+birth name, +Swedish Film Database person ID	+P1477, +P2168
+Q615	+,+	+FIFA player ID, +Swedish Film Database person ID	+P1469, +P2168
+Q615	+,+	+Sports-Reference.com Olympic athlete ID, +Swedish Film Database person ID	+P1447, +P2168
+Q615	+,+	+Encyclopædia Britannica Online ID, +Swedish Film Database person ID	+P1417, +P2168
+Q615	+,+	+languages spoken, written or signed, +Swedish Film Database person ID	+P1412, +P2168
+Q615	+,+	+convicted of, +Swedish Film Database person ID	+P1399, +P2168
+Q615	+,+	+NSK ID, +Swedish Film Database person ID	+P1375, +P2168
+Q615	+,+	+LNB ID, +Swedish Film Database person ID	+P1368, +P2168
+Q615	+,+	+number of matches played/races/starts, +Swedish Film Database person ID	+P1350, +P2168
+Q615	+,+	+participant in, +Swedish Film Database person ID	+P1344, +P2168
+Q615	+,+	+described by source, +Swedish Film Database person ID	+P1343, +P2168
+Q615	+,+	+Gran Enciclopèdia Catalana ID, +Swedish Film Database person ID	+P1296, +P2168
+Q615	+,+	+Munzinger Sport number, +Swedish Film Database person ID	+P1285, +P2168
+Q615	+,+	+CANTIC ID (old), +Swedish Film Database person ID	+P1273, +P2168
+Q615	+,+	+AlloCiné person ID, +Swedish Film Database person ID	+P1266, +P2168
+Q615	+,+	+NNDB people ID, +Swedish Film Database person ID	+P1263, +P2168
+Q615	+,+	+relative, +Swedish Film Database person ID	+P1038, +P2168
+Q615	+,+	+NORAF ID, +Swedish Film Database person ID	+P1015, +P2168
+Q615	+,+	+Nationale Thesaurus voor Auteurs ID, +Swedish Film Database person ID	+P1006, +P2168
+Q615	+,+	+member of sports team, +Swedish Film Database person ID	+P54, +P2168
+Q615	+,+	+child, +Swedish Film Database person ID	+P40, +P2168
+Q615	+,+	+position held, +Swedish Film Database person ID	+P39, +P2168
+Q615	+,+	+instance of, +Swedish Film Database person ID	+P31, +P2168
+Q615	+,+	+country of citizenship, +Swedish Film Database person ID	+P27, +P2168
+Q615	+,+	+spouse, +Swedish Film Database person ID	+P26, +P2168
+Q615	+,+	+Library of Congress authority ID, +Swedish Film Database person ID	+P244, +P2168
+Q615	+,+	+GND ID, +Swedish Film Database person ID	+P227, +P2168
+Q615	+,+	+father, +Swedish Film Database person ID	+P22, +P2168
+Q615	+,+	+VIAF ID, +Swedish Film Database person ID	+P214, +P2168
+Q615	+,+	+ISNI, +Swedish Film Database person ID	+P213, +P2168
+Q615	+,+	+sex or gender, +Swedish Film Database person ID	+P21, +P2168
+Q615	+,+	+place of birth, +Swedish Film Database person ID	+P19, +P2168
+Q615	+,+	+image, +Swedish Film Database person ID	+P18, +P2168
+Q615	+,+	+ethnic group, +Swedish Film Database person ID	+P172, +P2168
+Q615	+,+	+award received, +Swedish Film Database person ID	+P166, +P2168
+Q615	+,+	+employer, +Swedish Film Database person ID	+P108, +P2168
+Q615	+,+	+occupation, +Swedish Film Database person ID	+P106, +P2168
+Q615	+,+	+native language, +Swedish Film Database person ID	+P103, +P2168
+Q615	-,+	-main subject, +Swedish Film Database person ID	-P921, +P2168
+Q615	-,+	-participant, +Swedish Film Database person ID	-P710, +P2168
+Q615	-,+	-captain, +Swedish Film Database person ID	-P634, +P2168
+Q615	-,+	-significant person, +Swedish Film Database person ID	-P3342, +P2168
+Q615	-,+	-statistical leader, +Swedish Film Database person ID	-P3279, +P2168
+Q615	-,+	-category's main topic, +Swedish Film Database person ID	-P301, +P2168
+Q615	-,+	-Wikidata property example, +Swedish Film Database person ID	-P1855, +P2168
+Q615	-,+	-defendant, +Swedish Film Database person ID	-P1591, +P2168
+Q615	-,+	-points/goal scored by, +Swedish Film Database person ID	-P1363, +P2168
+Q615	-,+	-winner, +Swedish Film Database person ID	-P1346, +P2168
+Q615	-,+	-office held by head of government, +Swedish Film Database person ID	-P1313, +P2168
+Q615	-,+	-child, +Swedish Film Database person ID	-P40, +P2168
+Q615	-,+	-father, +Swedish Film Database person ID	-P22, +P2168
+Q615	-,+	-creator, +Swedish Film Database person ID	-P170, +P2168
+Q615	-,+	-country, +Swedish Film Database person ID	-P17, +P2168
+Q615	-,+	-cast member, +Swedish Film Database person ID	-P161, +P2168
+Q615	-,+	-located in the administrative territorial entity, +Swedish Film Database person ID	-P131, +P2168
+Q615	+*	+official website *language of work or name	+P856 *P407
+Q615	+*	+given name *series ordinal	+P735 *P1545
+Q615	+*	+total goals in career *date of the latest one	+P6509 *P7125
+Q615	+*	+total goals in career *date of the first one	+P6509 *P7124
+Q615	+*	+total goals in career *of	+P6509 *P642
+Q615	+*	+total goals in career *point in time	+P6509 *P585
+Q615	+*	+residence *end time	+P551 *P582
+Q615	+*	+residence *start time	+P551 *P580
+Q615	+*	+FootballFacts.ru player ID *URL	+P3660 *P2699
+Q615	+*	+FootballFacts.ru player ID *reason for deprecated rank	+P3660 *P2241
+Q615	+*	+base salary *point in time	+P3618 *P585
+Q615	+*	+base salary *employer	+P3618 *P108
+Q615	+*	+Treccani ID *named as	+P3365 *P1810
+Q615	+*	+significant person *statement is subject of	+P3342 *P805
+Q615	+*	+IdRef ID *named as	+P269 *P1810
+Q615	+*	+Transfermarkt player ID *named as	+P2446 *P1810
+Q615	+*	+YouTube channel ID *point in time	+P2397 *P585
+Q615	+*	+YouTube channel ID *start time	+P2397 *P580
+Q615	+*	+YouTube channel ID *number of viewers/listeners	+P2397 *P5436
+Q615	+*	+YouTube channel ID *number of subscribers	+P2397 *P3744
+Q615	+*	+YouTube channel ID *number of works	+P2397 *P3740
+Q615	+*	+YouTube channel ID *named as	+P2397 *P1810
+Q615	+*	+YouTube channel ID *has quality	+P2397 *P1552
+Q615	+*	+Twitter username *Twitter user numeric ID	+P2002 *P6552
+Q615	+*	+Twitter username *point in time	+P2002 *P585
+Q615	+*	+Twitter username *start time	+P2002 *P580
+Q615	+*	+Twitter username *number of subscribers	+P2002 *P3744
+Q615	+*	+Twitter username *has quality	+P2002 *P1552
+Q615	+*	+sport number *of	+P1618 *P642
+Q615	+*	+sport number *start time	+P1618 *P580
+Q615	+*	+convicted of *statement is subject of	+P1399 *P805
+Q615	+*	+convicted of *point in time	+P1399 *P585
+Q615	+*	+convicted of *duration	+P1399 *P2047
+Q615	+*	+convicted of *penalty	+P1399 *P1596
+Q615	+*	+convicted of *country	+P1399 *P17
+Q615	+*	+number of matches played/races/starts *date of the latest one	+P1350 *P7125
+Q615	+*	+number of matches played/races/starts *date of the first one	+P1350 *P7124
+Q615	+*	+number of matches played/races/starts *of	+P1350 *P642
+Q615	+*	+number of matches played/races/starts *point in time	+P1350 *P585
+Q615	+*	+participant in *number of points/goals/set scored	+P1344 *P1351
+Q615	+*	+participant in *number of matches played/races/starts	+P1344 *P1350
+Q615	+*	+participant in *member of sports team	+P1344 *P54
+Q615	+*	+described by source *statement is subject of	+P1343 *P805
+Q615	+*	+described by source *URL	+P1343 *P2699
+Q615	+*	+described by source *title	+P1343 *P1476
+Q615	+*	+relative *kinship to subject	+P1038 *P1039
+Q615	+*	+member of sports team *end time	+P54 *P582
+Q615	+*	+member of sports team *start time	+P54 *P580
+Q615	+*	+member of sports team *number of points/goals/set scored	+P54 *P1351
+Q615	+*	+member of sports team *number of matches played/races/starts	+P54 *P1350
+Q615	+*	+position held *start time	+P39 *P580
+Q615	+*	+country of citizenship *start time	+P27 *P580
+Q615	+*	+spouse *start time	+P26 *P580
+Q615	+*	+image *media legend	+P18 *P2096
+Q615	+*	+award received *statement is subject of	+P166 *P805
+Q615	+*	+award received *point in time	+P166 *P585
+Q615	+*	+award received *series ordinal	+P166 *P1545
+Q615	+*	+award received *title	+P166 *P1476
+Q615	+*	+award received *conferred by	+P166 *P1027
+Q615	+*	+employer *end time	+P108 *P582
+Q615	+*	+employer *start time	+P108 *P580
+Q615	+*	+occupation *position played on team / speciality	+P106 *P413
+Q615	-*	-participant *position played on team / speciality	-P710 *P413
+Q615	-*	-participant *sport number	-P710 *P1618
+Q615	-*	-participant *number of points/goals/set scored	-P710 *P1351
+Q615	-*	-participant *number of matches played/races/starts	-P710 *P1350
+Q615	-*	-captain *end time	-P634 *P582
+Q615	-*	-captain *start time	-P634 *P580
+Q615	-*	-significant person *statement is subject of	-P3342 *P805
+Q615	-*	-statistical leader *country for sport	-P3279 *P1532
+Q615	-*	-statistical leader *number of points/goals/set scored	-P3279 *P1351
+Q615	-*	-statistical leader *criterion used	-P3279 *P1013
+Q615	-*	-statistical leader *member of sports team	-P3279 *P54
+Q615	-*	-Wikidata property example *Opta football player ID	-P1855 *P8736
+Q615	-*	-Wikidata property example *footedness	-P1855 *P8006
+Q615	-*	-Wikidata property example *date of the latest one	-P1855 *P7125
+Q615	-*	-Wikidata property example *date of the first one	-P1855 *P7124
+Q615	-*	-Wikidata property example *total goals in career	-P1855 *P6509
+Q615	-*	-Wikidata property example *of	-P1855 *P642
+Q615	-*	-Wikidata property example *BDFA player ID	-P1855 *P6188
+Q615	-*	-Wikidata property example *point in time	-P1855 *P585
+Q615	-*	-Wikidata property example *Transfermarkt player ID	-P1855 *P2446
+Q615	-*	-defendant *convicted of	-P1591 *P1399
+Q615	-*	-points/goal scored by *match time of event	-P1363 *P1390
+Q615	-*	-points/goal scored by *member of sports team	-P1363 *P54
+Q615	-*	-winner *point in time	-P1346 *P585
+Q615	+*,*	+total goals in career *date of the latest one, *date of the first one	+P6509 *P7125, *P7124
+Q615	+*,*	+total goals in career *date of the latest one, *of	+P6509 *P7125, *P642
+Q615	+*,*	+total goals in career *date of the latest one, *point in time	+P6509 *P7125, *P585
+Q615	+*,*	+total goals in career *date of the first one, *of	+P6509 *P7124, *P642
+Q615	+*,*	+total goals in career *date of the first one, *point in time	+P6509 *P7124, *P585
+Q615	+*,*	+total goals in career *of, *point in time	+P6509 *P642, *P585
+Q615	+*,*	+residence *end time, *start time	+P551 *P582, *P580
+Q615	+*,*	+FootballFacts.ru player ID *URL, *reason for deprecated rank	+P3660 *P2699, *P2241
+Q615	+*,*	+base salary *point in time, *employer	+P3618 *P585, *P108
+Q615	+*,*	+YouTube channel ID *point in time, *start time	+P2397 *P585, *P580
+Q615	+*,*	+YouTube channel ID *point in time, *number of viewers/listeners	+P2397 *P585, *P5436
+Q615	+*,*	+YouTube channel ID *point in time, *number of subscribers	+P2397 *P585, *P3744
+Q615	+*,*	+YouTube channel ID *point in time, *number of works	+P2397 *P585, *P3740
+Q615	+*,*	+YouTube channel ID *point in time, *named as	+P2397 *P585, *P1810
+Q615	+*,*	+YouTube channel ID *point in time, *has quality	+P2397 *P585, *P1552
+Q615	+*,*	+YouTube channel ID *start time, *number of viewers/listeners	+P2397 *P580, *P5436
+Q615	+*,*	+YouTube channel ID *start time, *number of subscribers	+P2397 *P580, *P3744
+Q615	+*,*	+YouTube channel ID *start time, *number of works	+P2397 *P580, *P3740
+Q615	+*,*	+YouTube channel ID *start time, *named as	+P2397 *P580, *P1810
+Q615	+*,*	+YouTube channel ID *start time, *has quality	+P2397 *P580, *P1552
+Q615	+*,*	+YouTube channel ID *number of viewers/listeners, *number of subscribers	+P2397 *P5436, *P3744
+Q615	+*,*	+YouTube channel ID *number of viewers/listeners, *number of works	+P2397 *P5436, *P3740
+Q615	+*,*	+YouTube channel ID *number of viewers/listeners, *named as	+P2397 *P5436, *P1810
+Q615	+*,*	+YouTube channel ID *number of viewers/listeners, *has quality	+P2397 *P5436, *P1552
+Q615	+*,*	+YouTube channel ID *number of subscribers, *number of works	+P2397 *P3744, *P3740
+Q615	+*,*	+YouTube channel ID *number of subscribers, *named as	+P2397 *P3744, *P1810
+Q615	+*,*	+YouTube channel ID *number of subscribers, *has quality	+P2397 *P3744, *P1552
+Q615	+*,*	+YouTube channel ID *number of works, *named as	+P2397 *P3740, *P1810
+Q615	+*,*	+YouTube channel ID *number of works, *has quality	+P2397 *P3740, *P1552
+Q615	+*,*	+YouTube channel ID *named as, *has quality	+P2397 *P1810, *P1552
+Q615	+*,*	+Twitter username *Twitter user numeric ID, *point in time	+P2002 *P6552, *P585
+Q615	+*,*	+Twitter username *Twitter user numeric ID, *start time	+P2002 *P6552, *P580
+Q615	+*,*	+Twitter username *Twitter user numeric ID, *number of subscribers	+P2002 *P6552, *P3744
+Q615	+*,*	+Twitter username *Twitter user numeric ID, *has quality	+P2002 *P6552, *P1552
+Q615	+*,*	+Twitter username *point in time, *start time	+P2002 *P585, *P580
+Q615	+*,*	+Twitter username *point in time, *number of subscribers	+P2002 *P585, *P3744
+Q615	+*,*	+Twitter username *point in time, *has quality	+P2002 *P585, *P1552
+Q615	+*,*	+Twitter username *start time, *number of subscribers	+P2002 *P580, *P3744
+Q615	+*,*	+Twitter username *start time, *has quality	+P2002 *P580, *P1552
+Q615	+*,*	+Twitter username *number of subscribers, *has quality	+P2002 *P3744, *P1552
+Q615	+*,*	+sport number *of, *start time	+P1618 *P642, *P580
+Q615	+*,*	+convicted of *statement is subject of, *point in time	+P1399 *P805, *P585
+Q615	+*,*	+convicted of *statement is subject of, *duration	+P1399 *P805, *P2047
+Q615	+*,*	+convicted of *statement is subject of, *penalty	+P1399 *P805, *P1596
+Q615	+*,*	+convicted of *statement is subject of, *country	+P1399 *P805, *P17
+Q615	+*,*	+convicted of *point in time, *duration	+P1399 *P585, *P2047
+Q615	+*,*	+convicted of *point in time, *penalty	+P1399 *P585, *P1596
+Q615	+*,*	+convicted of *point in time, *country	+P1399 *P585, *P17
+Q615	+*,*	+convicted of *duration, *penalty	+P1399 *P2047, *P1596
+Q615	+*,*	+convicted of *duration, *country	+P1399 *P2047, *P17
+Q615	+*,*	+convicted of *penalty, *country	+P1399 *P1596, *P17
+Q615	+*,*	+number of matches played/races/starts *date of the latest one, *date of the first one	+P1350 *P7125, *P7124
+Q615	+*,*	+number of matches played/races/starts *date of the latest one, *of	+P1350 *P7125, *P642
+Q615	+*,*	+number of matches played/races/starts *date of the latest one, *point in time	+P1350 *P7125, *P585
+Q615	+*,*	+number of matches played/races/starts *date of the first one, *of	+P1350 *P7124, *P642
+Q615	+*,*	+number of matches played/races/starts *date of the first one, *point in time	+P1350 *P7124, *P585
+Q615	+*,*	+number of matches played/races/starts *of, *point in time	+P1350 *P642, *P585
+Q615	+*,*	+participant in *number of points/goals/set scored, *number of matches played/races/starts	+P1344 *P1351, *P1350
+Q615	+*,*	+participant in *number of points/goals/set scored, *member of sports team	+P1344 *P1351, *P54
+Q615	+*,*	+participant in *number of matches played/races/starts, *member of sports team	+P1344 *P1350, *P54
+Q615	+*,*	+described by source *statement is subject of, *URL	+P1343 *P805, *P2699
+Q615	+*,*	+described by source *statement is subject of, *title	+P1343 *P805, *P1476
+Q615	+*,*	+described by source *URL, *title	+P1343 *P2699, *P1476
+Q615	+*,*	+member of sports team *end time, *start time	+P54 *P582, *P580
+Q615	+*,*	+member of sports team *end time, *number of points/goals/set scored	+P54 *P582, *P1351
+Q615	+*,*	+member of sports team *end time, *number of matches played/races/starts	+P54 *P582, *P1350
+Q615	+*,*	+member of sports team *start time, *number of points/goals/set scored	+P54 *P580, *P1351
+Q615	+*,*	+member of sports team *start time, *number of matches played/races/starts	+P54 *P580, *P1350
+Q615	+*,*	+member of sports team *number of points/goals/set scored, *number of matches played/races/starts	+P54 *P1351, *P1350
+Q615	+*,*	+award received *statement is subject of, *point in time	+P166 *P805, *P585
+Q615	+*,*	+award received *statement is subject of, *series ordinal	+P166 *P805, *P1545
+Q615	+*,*	+award received *statement is subject of, *title	+P166 *P805, *P1476
+Q615	+*,*	+award received *statement is subject of, *conferred by	+P166 *P805, *P1027
+Q615	+*,*	+award received *point in time, *series ordinal	+P166 *P585, *P1545
+Q615	+*,*	+award received *point in time, *title	+P166 *P585, *P1476
+Q615	+*,*	+award received *point in time, *conferred by	+P166 *P585, *P1027
+Q615	+*,*	+award received *series ordinal, *title	+P166 *P1545, *P1476
+Q615	+*,*	+award received *series ordinal, *conferred by	+P166 *P1545, *P1027
+Q615	+*,*	+award received *title, *conferred by	+P166 *P1476, *P1027
+Q615	+*,*	+employer *end time, *start time	+P108 *P582, *P580
+Q615	-*,*	-participant *position played on team / speciality, *sport number	-P710 *P413, *P1618
+Q615	-*,*	-participant *position played on team / speciality, *number of points/goals/set scored	-P710 *P413, *P1351
+Q615	-*,*	-participant *position played on team / speciality, *number of matches played/races/starts	-P710 *P413, *P1350
+Q615	-*,*	-participant *sport number, *number of points/goals/set scored	-P710 *P1618, *P1351
+Q615	-*,*	-participant *sport number, *number of matches played/races/starts	-P710 *P1618, *P1350
+Q615	-*,*	-participant *number of points/goals/set scored, *number of matches played/races/starts	-P710 *P1351, *P1350
+Q615	-*,*	-captain *end time, *start time	-P634 *P582, *P580
+Q615	-*,*	-statistical leader *country for sport, *number of points/goals/set scored	-P3279 *P1532, *P1351
+Q615	-*,*	-statistical leader *country for sport, *criterion used	-P3279 *P1532, *P1013
+Q615	-*,*	-statistical leader *country for sport, *member of sports team	-P3279 *P1532, *P54
+Q615	-*,*	-statistical leader *number of points/goals/set scored, *criterion used	-P3279 *P1351, *P1013
+Q615	-*,*	-statistical leader *number of points/goals/set scored, *member of sports team	-P3279 *P1351, *P54
+Q615	-*,*	-statistical leader *criterion used, *member of sports team	-P3279 *P1013, *P54
+Q615	-*,*	-Wikidata property example *Opta football player ID, *footedness	-P1855 *P8736, *P8006
+Q615	-*,*	-Wikidata property example *Opta football player ID, *date of the latest one	-P1855 *P8736, *P7125
+Q615	-*,*	-Wikidata property example *Opta football player ID, *date of the first one	-P1855 *P8736, *P7124
+Q615	-*,*	-Wikidata property example *Opta football player ID, *total goals in career	-P1855 *P8736, *P6509
+Q615	-*,*	-Wikidata property example *Opta football player ID, *of	-P1855 *P8736, *P642
+Q615	-*,*	-Wikidata property example *Opta football player ID, *BDFA player ID	-P1855 *P8736, *P6188
+Q615	-*,*	-Wikidata property example *Opta football player ID, *point in time	-P1855 *P8736, *P585
+Q615	-*,*	-Wikidata property example *Opta football player ID, *Transfermarkt player ID	-P1855 *P8736, *P2446
+Q615	-*,*	-Wikidata property example *footedness, *date of the latest one	-P1855 *P8006, *P7125
+Q615	-*,*	-Wikidata property example *footedness, *date of the first one	-P1855 *P8006, *P7124
+Q615	-*,*	-Wikidata property example *footedness, *total goals in career	-P1855 *P8006, *P6509
+Q615	-*,*	-Wikidata property example *footedness, *of	-P1855 *P8006, *P642
+Q615	-*,*	-Wikidata property example *footedness, *BDFA player ID	-P1855 *P8006, *P6188
+Q615	-*,*	-Wikidata property example *footedness, *point in time	-P1855 *P8006, *P585
+Q615	-*,*	-Wikidata property example *footedness, *Transfermarkt player ID	-P1855 *P8006, *P2446
+Q615	-*,*	-Wikidata property example *date of the latest one, *date of the first one	-P1855 *P7125, *P7124
+Q615	-*,*	-Wikidata property example *date of the latest one, *total goals in career	-P1855 *P7125, *P6509
+Q615	-*,*	-Wikidata property example *date of the latest one, *of	-P1855 *P7125, *P642
+Q615	-*,*	-Wikidata property example *date of the latest one, *BDFA player ID	-P1855 *P7125, *P6188
+Q615	-*,*	-Wikidata property example *date of the latest one, *point in time	-P1855 *P7125, *P585
+Q615	-*,*	-Wikidata property example *date of the latest one, *Transfermarkt player ID	-P1855 *P7125, *P2446
+Q615	-*,*	-Wikidata property example *date of the first one, *total goals in career	-P1855 *P7124, *P6509
+Q615	-*,*	-Wikidata property example *date of the first one, *of	-P1855 *P7124, *P642
+Q615	-*,*	-Wikidata property example *date of the first one, *BDFA player ID	-P1855 *P7124, *P6188
+Q615	-*,*	-Wikidata property example *date of the first one, *point in time	-P1855 *P7124, *P585
+Q615	-*,*	-Wikidata property example *date of the first one, *Transfermarkt player ID	-P1855 *P7124, *P2446
+Q615	-*,*	-Wikidata property example *total goals in career, *of	-P1855 *P6509, *P642
+Q615	-*,*	-Wikidata property example *total goals in career, *BDFA player ID	-P1855 *P6509, *P6188
+Q615	-*,*	-Wikidata property example *total goals in career, *point in time	-P1855 *P6509, *P585
+Q615	-*,*	-Wikidata property example *total goals in career, *Transfermarkt player ID	-P1855 *P6509, *P2446
+Q615	-*,*	-Wikidata property example *of, *BDFA player ID	-P1855 *P642, *P6188
+Q615	-*,*	-Wikidata property example *of, *point in time	-P1855 *P642, *P585
+Q615	-*,*	-Wikidata property example *of, *Transfermarkt player ID	-P1855 *P642, *P2446
+Q615	-*,*	-Wikidata property example *BDFA player ID, *point in time	-P1855 *P6188, *P585
+Q615	-*,*	-Wikidata property example *BDFA player ID, *Transfermarkt player ID	-P1855 *P6188, *P2446
+Q615	-*,*	-Wikidata property example *point in time, *Transfermarkt player ID	-P1855 *P585, *P2446
+Q615	-*,*	-points/goal scored by *match time of event, *member of sports team	-P1363 *P1390, *P54
+Q615	++	+award received +topic's main template	+P166 +P1424
+Q615	++	+award received +official name	+P166 +P1448
+Q615	++	+award received +native label	+P166 +P1705
+Q615	++	+award received +different from	+P166 +P1889
+Q615	++	+award received +category for recipients of this award	+P166 +P2517
+Q615	++	+award received +hashtag	+P166 +P2572
+Q615	++	+award received +Great Russian Encyclopedia Online ID	+P166 +P2924
+Q615	++	+award received +NE.se ID	+P166 +P3222
+Q615	++	+award received +Commons category	+P166 +P373
+Q615	++	+award received +inception	+P166 +P571
+Q615	++	+award received +start time	+P166 +P580
+Q615	++	+award received +Freebase ID	+P166 +P646
+Q615	++	+award received +sport	+P166 +P641
+Q615	++	+award received +official website	+P166 +P856
+Q615	++	+award received +topic's main category	+P166 +P910
+Q615	++	+award received +conferred by	+P166 +P1027
+Q615	++	+award received +Quora topic ID	+P166 +P3417
+Q615	++	+award received +image	+P166 +P18
+Q615	++	+award received +instance of	+P166 +P31
+Q615	++	+award received +dissolved, abolished or demolished date	+P166 +P576
+Q615	++	+award received +part of	+P166 +P361
+Q615	++	+award received +opposite of	+P166 +P461
+Q615	++	+award received +sponsor	+P166 +P859
+Q615	++	+award received +subclass of	+P166 +P279
+Q615	++	+award received +winner	+P166 +P1346
+Q615	++	+award received +country	+P166 +P17
+Q615	++	+award received +significant event	+P166 +P793
+Q615	++	+award received +period of event	+P166 +P2257
+Q615	++	+award received +Google Knowledge Graph ID	+P166 +P2671
+Q615	++	+award received +NKCR AUT ID	+P166 +P691
+Q615	++	+award received +VIAF ID	+P166 +P214
+Q615	++	+award received +is a list of	+P166 +P360
+Q615	++	+award received +organizer	+P166 +P664
+Q615	++	+award received +has list	+P166 +P2354
+Q615	++	+award received +Twitter username	+P166 +P2002
+Q615	++	+award received +Instagram username	+P166 +P2003
+Q615	++	+award received +female form of label	+P166 +P2521
+Q615	++	+award received +male form of label	+P166 +P3321
+Q615	++	+award received +headquarters location	+P166 +P159
+Q615	++	+award received +applies to jurisdiction	+P166 +P1001
+Q615	++	+award received +Gran Enciclopèdia Catalana ID	+P166 +P1296
+Q615	++	+award received +service ribbon image	+P166 +P2425
+Q615	++	+award received +named after	+P166 +P138
+Q615	++	+award received +creator	+P166 +P170
+Q615	++	+award received +location	+P166 +P276
