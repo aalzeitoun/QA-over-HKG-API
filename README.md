@@ -58,10 +58,10 @@ JSON received from API app:
 
 ## Authors
 
-Contributors names and contact info
+Contributors names and contact info:
 
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+* Ahmad Alzeitoun (Author)  
+* Dr. Mohnish Dubey (Supervisor)
 
 ## Version History
 
@@ -75,8 +75,5 @@ To be added
 ## Acknowledgments
 
 Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+* [Learning to Rank Query Graphs for Complex Question Answering over Knowledge Graphs](https://arxiv.org/abs/1811.01118)
+* [Semantic Parsing via Staged Query Graph Generation: Question Answering with Knowledge Base](https://www.microsoft.com/en-us/research/wp-content/uploads/2016/02/ACL15-STAGG.pdf)
