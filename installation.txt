@@ -1,0 +1,11 @@
+Installations:
+
+
+install pytorch/ cuda
+
+pip install -U sentence-transformers
+
+install SPARQLWrapper
+
+install FastAPI, Uvicorn
+
