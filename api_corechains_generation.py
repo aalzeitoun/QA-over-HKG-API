@@ -8,11 +8,11 @@ from collections import OrderedDict
 from sparqlQueries import dict_sparqlQueries,mu_prop_lcquad, lcquad_templates, ask_triple, dict_lcquad_predicates, get_query_results, write_to_file
 from api_get_correct_corechain import lcquad_corechain
 
-F_corechains_cache = open("data/te/lcquad_TP_corechain22.txt", "w")
-F_cache_error = open("data/te/lcquad_TP_corechain_error22.txt", "w")
-F_cache_terminal = open("data/te/lcquad_TP_terminal22.txt", "w")
-F_cache_time = open("data/te/lcquad_TP_time22.txt", "w")
-F_cache_has_no_ans = open("data/te/lcquad_TP_has_no_ans22.txt", "w")
+F_corechains_cache = open("data/te/lcquad_TP_corechain.txt", "w")
+F_cache_error = open("data/te/lcquad_TP_corechain_error.txt", "w")
+F_cache_terminal = open("data/te/lcquad_TP_terminal.txt", "w")
+F_cache_time = open("data/te/lcquad_TP_time.txt", "w")
+F_cache_has_no_ans = open("data/te/lcquad_TP_has_no_ans.txt", "w")
 
 
 oneTE_templates = lcquad_templates()
@@ -1085,7 +1085,7 @@ def corechains_generation(question_val, entityId):
     return corechains
 
 
-entityIds_arr = ['wd:Q1079']
-question_val = "Who is the director and executive producer of Breaking Bad?"
+# entityIds_arr = ['wd:Q1079']
+# question_val = "Who is the director and executive producer of Breaking Bad?"
 
 # corechains_generation(question_val, entityIds_arr)

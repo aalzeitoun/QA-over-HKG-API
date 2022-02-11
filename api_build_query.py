@@ -192,7 +192,7 @@ def question_answering(nlQuestion, topicEntity):
 
 
 # Which is the sports award that Lionel Messi was awarded?  (Q615)
-# question_answering("Which is the sports award that Lionel Messi was awarded?", "Q615")
+question_answering("Which is the sports award that Lionel Messi was awarded?", "Q615")
 
 
 
