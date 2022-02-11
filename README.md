@@ -17,7 +17,7 @@ We recommend **Python 3.6** or higher, **[PyTorch 1.6.0](https://pytorch.org/get
 If you want to use a GPU / CUDA, you must install PyTorch with the matching CUDA Version. Follow
 [PyTorch - Get Started](https://pytorch.org/get-started/locally/) for further details how to install PyTorch.
 
-The pretrained models should be existed under model folder, the folder is empty and you need to download them from this [link](https://github.com/aalzeitoun/QA-over-HKG-API).
+Our pretrained models should be existed under model folder, the folder is empty right now and you need to download them from this [link](https://github.com/aalzeitoun/QA-over-HKG-API).
 
 ### Installing
 
